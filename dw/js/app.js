@@ -338,6 +338,11 @@ function CretaButton(){
     window.location.href = "./map-2.html";
 }
 
+function SelectContinent(el){
+  var continent = el.id,
+  selCont = "./c" + continent + ".html";
+  window.location.href = selCont;
+}
 function SelectDino(el){
     pkg.dino = el.id;
     prox.dino = pkg.dino;
