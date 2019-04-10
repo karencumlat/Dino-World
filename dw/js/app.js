@@ -4,6 +4,7 @@ var carn = []
 
 var tyrannosaurus = {
     food: herb,
+    src:"",
     info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator:"",
     size:"100"
@@ -27,15 +28,15 @@ var pkg = {
 var handler = {
     set:function(obj, props, value){
         //What to handle
-        
+
         if(props == "dino"){
             SelectDinoUI(value);
         }
-        
+
         if(props == "food"){
             ShowFoodUI(value);
         }
-        
+
         if(props == "info"){
             ShowInfoUI(value);
         }
@@ -45,7 +46,7 @@ var handler = {
 
 var prox = new Proxy(pkg, handler);
 
-    
+
 // ===== CHANGE STATE FUNCTIONS ===== //
 
 function ExploreButton(){
@@ -81,11 +82,11 @@ function SelectDinoUI(value){
 function ShowInfoUI(value){
     document.querySelector("#infoBox").style.backgroundColor = "yellowgreen";
     document.querySelector("#infoBox").innerHTML = value;
-    
+
 }
 
 function ShowFoodUI(value){
-    
+
     if(document.querySelector(".menu__food").style.display == "none"){
     document.querySelector(".menu__food").style.display = "grid";
     } else {
