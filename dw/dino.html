@@ -15,6 +15,7 @@
   <header class="page__header">
     <div class="main__menu">
       <input type="image" src="imgs/theme/btn-menu.svg" id="btn-menu" class="btn__main" alt="Menu">
+        <div id="menuCircle" onclick="Hamburger()"></div>
     </div>
   </header>
   <main class="page__main">
@@ -22,16 +23,18 @@
     <div class="map">
         <img class="logo__img" src="imgs/dinosaurs/adult/tyrannosaurus.svg" alt="North America Continent"/>
     </div>
+  </main>
+   <footer class="page__footer">
     <div class="menu__food food">
       <input type="image" src="imgs/dinosaurs/food/btn-food-01.svg" id="food1" class="btn__footer" alt="">
       <input type="image" src="imgs/dinosaurs/food/btn-food-02.svg" id="food2" class="btn__footer " alt="">
       <input type="image" src="imgs/dinosaurs/food/btn-food-03.svg" id="food3" class="btn__footer" alt="">
-      </div>
-  </main>
-   <footer class="page__footer">
+    </div>
+    <div class="menu__info info" id="infoBox">  
+    </div> 
      <div class="menu__dino">
-         <input type="image" src="imgs/theme/btn-info.svg" id="btn-info" class="btn__footer" alt="Information">
-         <input type="image" src="imgs/theme/btn-food.svg" id="btn-food" class="btn__footer" alt="Food" onclick="ShowFood1(), ShowFood2(), ShowFood3()">
+         <input type="image" src="imgs/theme/btn-info.svg" id="btn-info" class="btn__footer" alt="Information" onclick="ShowInfo()">
+         <input type="image" src="imgs/theme/btn-food.svg" id="btn-food" class="btn__footer" alt="Food" onclick="ShowFood()">
          <input type="image" src="imgs/theme/btn-predator.svg" id="btn-pre" class="btn__footer" alt="Predator">
      </div>
   </footer>

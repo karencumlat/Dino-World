@@ -80,7 +80,7 @@ img {
     max-width: 39.9375em;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% auto 15%;
+    grid-template-rows: 10% auto 35%;
     grid-template-areas: "hd"
       "mn"
       "ft";
@@ -92,6 +92,16 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+    #menuCircle{
+        position: absolute;
+        right: 1.4em;
+        width: 15%;
+        border: 3px black solid;
+        height: 50px;
+        border-radius: 25px;
+        background-color: yellowgreen;
+    }
 
   .menu__food {
     display: grid;
@@ -116,7 +126,13 @@ img {
   }
 
   .page__footer {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
   }
+    
+    #infoBox {
+        border-radius: 25px;
+    }
 
   .menu__dino {
     display: grid;

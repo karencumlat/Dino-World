@@ -1,23 +1,23 @@
 // ========== DINOSAURS ========== //
+var herb = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
+var carn = []
 
-var Tyrannosaurus = {
-    food1:"imgs/dinosaurs/food/btn-food-01.svg",
-    food2:"imgs/dinosaurs/food/btn-food-02.svg",
-    food3:"imgs/dinosaurs/food/btn-food-03.svg",
+var tyrannosaurus = {
+    food: herb,
     info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator:"",
     size:"100"
 }
 
-var dinosaurs = [Tyrannosaurus]
+var dinosaurs = [tyrannosaurus]
 
 // ===== STATE VARS ===== //
 
 var pkg = {
-    dino:"",
-    food1:"",
-    food2:"",
-    food3:"",
+    dino:"tyrannosaurus",
+    src: "",
+    info:"",
+    food:"",
     scale:""
 };
 
@@ -32,14 +32,12 @@ var handler = {
             SelectDinoUI(value);
         }
         
-        if(props == "food1"){
-            ShowFood1UI(value);
+        if(props == "food"){
+            ShowFoodUI(value);
         }
-        if(props == "food2"){
-            ShowFood2UI(value);
-        }
-        if(props == "food3"){
-            ShowFood3UI(value);
+        
+        if(props == "info"){
+            ShowInfoUI(value);
         }
     }
 }
@@ -63,19 +61,14 @@ function SelectDino(el){
     prox.dino = pkg.dino;
 }
 
-function ShowFood1(){
-    pkg.food1 = Tyrannosaurus.food1;
-    prox.food1 = pkg.food1;
+function ShowFood(){
+    pkg.food = pkg.dino.food;
+    prox.food = pkg.food;
 }
 
-function ShowFood2(){
-    pkg.food2 = Tyrannosaurus.food2;
-    prox.food2 = pkg.food2;
-}
-
-function ShowFood3(){
-    pkg.food3 = Tyrannosaurus.food3;
-    prox.food3 = pkg.food3;
+function ShowInfo(){
+    pkg.info = pkg.dino.info;
+    prox.info = pkg.info;
 }
 
 // ==== CHANGE UI FUNCTIONS ===== //
@@ -85,18 +78,20 @@ function SelectDinoUI(value){
     logo__img.src = value;
 }
 
-function ShowFood1UI(value){
-    document.querySelector(".menu__food").style.display = "grid";
-    document.querySelector("#food1").src = value;
+function ShowInfoUI(value){
+    document.querySelector("#infoBox").style.backgroundColor = "yellowgreen";
+    document.querySelector("#infoBox").innerHTML = value;
+    
 }
 
-function ShowFood2UI(value){
+function ShowFoodUI(value){
+    
+    if(document.querySelector(".menu__food").style.display == "none"){
     document.querySelector(".menu__food").style.display = "grid";
-    document.querySelector("#food2").src = value;
+    } else {
+    document.querySelector(".menu__food").style.display = "none";
+    }
+    document.querySelector("#food1").src = herb[0];
+    document.querySelector("#food2").src = herb[1];
+    document.querySelector("#food3").src = herb[2];
 }
-
-function ShowFood3UI(value){
-    document.querySelector(".menu__food").style.display = "grid";
-    document.querySelector("#food3").src = value;
-}
-
