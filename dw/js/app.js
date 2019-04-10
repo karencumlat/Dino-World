@@ -10,6 +10,14 @@ var tyrannosaurus = {
     size:"100"
 }
 
+var mosasaurus = {
+    food: carn,
+    src: ["../imgs/dinosaurs/egg/mosasaurus.svg", "../imgs/dinosaurs/baby/mosasaurus.svg", "../imgs/dinosaurs/adult/mosasaurus.svg"],
+    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    predator:"",
+    size:"100"
+}
+
 var dinosaurs = [tyrannosaurus]
 
 // ===== STATE VARS ===== //
