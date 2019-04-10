@@ -1,10 +1,10 @@
 // ========== DINOSAURS ========== //
-var herb = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
-var carn = []
+var carn = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
+var herb = []
 
 var tyrannosaurus = {
-    food: herb,
-    src:"",
+    food: carn,
+    src: ["img1", "img2", "img3"],
     info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator:"",
     size:"100"
@@ -15,7 +15,7 @@ var dinosaurs = [tyrannosaurus]
 // ===== STATE VARS ===== //
 
 var pkg = {
-    dino:"tyrannosaurus",
+    dino: tyrannosaurus,
     src: "",
     info:"",
     food:"",
@@ -101,9 +101,9 @@ function ShowFoodUI(value){
     } else {
     document.querySelector(".menu__food").style.display = "none";
     }
-    document.querySelector("#food1").src = herb[0];
-    document.querySelector("#food2").src = herb[1];
-    document.querySelector("#food3").src = herb[2];
+    document.querySelector("#food1").src = value[0];
+    document.querySelector("#food2").src = value[1];
+    document.querySelector("#food3").src = value[2];
 
     if(document.querySelector("#infoBox").style.backgroundColor == "yellowgreen"){
     document.querySelector("#infoBox").style.backgroundColor = "";
