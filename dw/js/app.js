@@ -4,7 +4,7 @@ var herb = []
 
 var tyrannosaurus = {
     food: carn,
-    src: ["img1", "img2", "img3"],
+    src: ["../imgs/dinosaurs/egg/tyrannosaurus.svg", "../imgs/dinosaurs/baby/tyrannosaurus.svg", "../imgs/dinosaurs/adult/tyrannosaurus.svg"],
     info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator:"",
     size:"100"
@@ -16,7 +16,7 @@ var dinosaurs = [tyrannosaurus]
 
 var pkg = {
     dino: tyrannosaurus,
-    src: "",
+    src: [0],
     info:"",
     food:"",
     scale:""
@@ -58,7 +58,7 @@ function CretaButton(){
 }
 
 function SelectDino(el){
-    pkg.dino = el.src;
+    pkg.dino = el.id;
     prox.dino = pkg.dino;
 }
 
@@ -76,7 +76,7 @@ function ShowInfo(){
 
 function SelectDinoUI(value){
     window.location.href = "./dino.html";
-    logo__img.src = value;
+    logo__img.src = value.src[0];
 }
 
 function ShowInfoUI(value){
