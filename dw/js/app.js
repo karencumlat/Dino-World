@@ -4,6 +4,9 @@ var herb = [];
 var omni = [];
 var pesc = [];
 
+var dinoImg = document.querySelector("#dinoImage"),
+    dinoH = document.querySelector("#dinoName");
+
 var tyrannosaurus = {
     food: carn,
     src: ["../imgs/dinosaurs/egg/tyrannosaurus.svg", "../imgs/dinosaurs/baby/tyrannosaurus.svg", "../imgs/dinosaurs/adult/tyrannosaurus.svg"],
@@ -295,12 +298,13 @@ var coloradisaurus = {
 // ===== STATE VARS ===== //
 
 var pkg = {
-    dino: tyrannosaurus,
-    src: [0],
+    dino: "",
+    src: "",
     info:"",
     food:"",
     scale:"",
-    background:""
+    background:"",
+    header:""
 };
 
 
@@ -312,6 +316,7 @@ var handler = {
 
         if(props == "dino"){
             SelectDinoUI(value);
+            ChangeHeader(value);
         }
 
         if(props == "food"){
@@ -343,9 +348,19 @@ function SelectContinent(el){
   selCont = "./c" + continent + ".html";
   window.location.href = selCont;
 }
+
 function SelectDino(el){
-    pkg.dino = el.id;
+    localStorage.setItem("DinoName", el.id)
+    pkg.dino = localStorage.getItem("DinoName");
     prox.dino = pkg.dino;
+
+    pkg.src = localStorage.getItem("DinoName") + ".src[0]";
+    prox.src = pkg.src;
+}
+
+function ChangeHeader(){
+  pkg.header = localStorage.getItem("DinoName");
+  prox.header = pkg.header;
 }
 
 function ShowFood(){
@@ -362,7 +377,13 @@ function ShowInfo(){
 
 function SelectDinoUI(value){
     window.location.href = "./dino.html";
-    logo__img.src = value.src[0];
+    // dinoImg.src = pkg.src;
+    // dinoH.innerHTML = localStorage.getItem("DinoName");
+
+}
+
+function ChangeHeaderUI(value){
+  dinoH.innerHTML = value;
 }
 
 function ShowInfoUI(value){
