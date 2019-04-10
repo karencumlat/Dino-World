@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>App | Dino World</title>
+  <link href="css/map.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+
+<body class="page">
+  <header class="page__header">
+    <div class="main__menu">
+      <input type="image" src="imgs/theme/btn-menu.svg" id="btn-menu" class="btn__main" alt="Menu">
+    </div>
+  </header>
+  <main class="page__main">
+    <h2 class="heading">Cretaceous Period</h2>
+    <div class="map">
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 472.5 426.2" style="enable-background:new 0 0 472.5 426.2;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #F6D2B4;
+            stroke: #000000;
+            stroke-miterlimit: 10;
+          }
+
+        </style>
+        <g id="southAmerica" onclick="selectContinent(this)">
+          <title>cretaceousMap</title>
+          <g id="South_America">
+            <path class="st0" d="M78,196.9c0,0-19,3.5-30,0c-12.5,6-9.5,8.5-7.5,12.5s1,29.9,1,29.9C52,257.3,78,280.9,78,280.9
+			s1.5,9.5,2.5,13.5c3.5,9,24.5,28,32.5,42c13.5,13.5,38.5,15,45.5,11.5s15.5-12,0-13c-2.7-9.3-17.3-9.3-17.3-9.3
+			c-2.7-14.2-7.7-25.7-4.2-39.2s4.1-27.5,0.8-31l-0.3-11.5c7-5,8.5-15.5-0.5-18.5h-13.2l-23.3-18.5c-5.5,0-15.5,6-16,0
+			S83.4,196.1,78,196.9z" />
+          </g>
+        </g>
+        <g id="antarctica" onclick="selectContinent(this)">
+          <path id="antarctica_2_" class="st0" d="M174.3,344.9h-11.1c-11.2,10-4.2,26-4.2,26.3s2,24.8,2,24.8c31,5,129.2,10,162.1-2.5
+		l7.8-9.5l16.1,0.5c5-5,4-16.4,15.5-16c9.5-6.5,1.5-17-10-16.5c-7-1.5-10-2-14-7H297l-5.3-4.5c-9.2,8-17.6,18.5-25.4,6
+		c-7.5,3.1-5.8,10-19.8,7.5s-21-5-29.8,12.3C192.5,368.4,174.5,384.9,174.3,344.9z" />
+        </g>
+        <g id="australia" onclick="selectContinent(this)">
+          <path id="australia_2_" class="st0" d="M356,325.6v14.8c-10.5-10-13-9-18-18.5h-7.1c-5.4,4.5-2.7,7.5-6,9.3
+		c-1.8,6.3,10.6,7.3,10.6,7.3c3,6.5,5,6,10,5c1.5,6.1,13.9,13,20.2,9.5c0,0,12.2,9.1,1.5,15.5s-7,14.3-2.1,12.6s43.9-24,63.4-31.6
+		c20-9.1,25.4-14.7,28-13.1c6.3,3.9,29-63.2-52.4-24.5l-21.4,0.5C374.5,317.4,366,329.3,356,325.6z" />
+        </g>
+        <g id="africa" onclick="selectContinent(this)">
+          <path id="africa_1_" class="st0" d="M174,156.9c-5,4.2-2.5,12-13,11c-5.2,4.3-2.4,21-5.2,26s-5.3,24.5,11.2,25.5s44-6.5,33.5,59.5
+		l-1.5,7.5l3.8,5.5l2.7,12l16,18c6,9.5,15.5-2.5,15.5-2.5l21.8-15.5c5.3-13,6.8-24.5,11.3-27.5c3-11-3.5-33.5,34-49
+		c11.5-5.5,6.5-17.5-13.5-9c1-6,14-8.5,24-8c13.5-8.5,14.6-21-6.7-23.5c-6.3-12.1-28.8-24.5-41.5-21.5s-11.3,2.5-19.8,1.5
+		s-8.5-4.5-22.5-12S187,145.9,174,156.9z M312.8,229.5c2.7,0,4.9,2.2,4.9,4.9s-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9
+		S310.1,229.5,312.8,229.5z M292,249.9c6-0.8,15-4.5,11,11l-11,7v13c-7,10-13.5-4.5-12.5-15S282.8,251.1,292,249.9z" />
+        </g>
+        <g id="euroAsia" onclick="selectContinent(this)">
+          <path id="euroAsia" class="st0" d="M429.5,130.9c1.5,7.7,0,17-1,21c-1.4,4.9-5.5,8.4-10.5,9c2,11.3-0.5,12.5-13,13.5s-31,0-31,0
+		c-4.5-9.5,3.5-16.5-16-17s-38,0-38,0c-3.5,18-43.5,9.5-43.5,9.5c-6.5-6-19.5-11.5-30-11c-6-1-7.5-3-13-0.5c-3,1.5-6.6,1.3-9.5-0.5
+		v-6.5l-14-1v-7h-5c-1,6-3,6.5-8.5,7c-5.5,4.5-10,8.5-17,3.5s-7.5-12,2-16.5c7.5-8,1.1-6.5-8.2-10c-4.3-10-1.3-15.5,5.2-15.5
+		L191,97.4h12.5c8.5-10,14.5-15.5,23-15.5c-1.1-9.3,7.1-8.5,3.3-13.5l3.7-12c9-8,16-10,25.3-5c4.8-5,12.3,0.5,3.8-12.5
+		c-0.1,0-9.6-5.5-3.8-9H303c14.5,5.5-1.3,8,20.1,7c9.4,2.5,15.4,9,21.4,9.5c4.2,0.3,8.3,0.3,12.5,0c0,0,7,6,11.5,7s11,3,12,7
+		c5.5,4,39.5,43.5,39.5,43.5c11.5,4,15,20.5,21.5,27C450,141.9,437.5,140.4,429.5,130.9z M400,227.9c-20-5.5-21-12-32-21h-20
+		c-2.5,28.5-11.5,42-11.5,42l-0.5,7.5c0,0-8.5,8-3.5,16.5c7,0.5,4,1.5,4,8h7.5l11.5-12c0,0,9.5,0.5,24.5-4
+		C395.5,254.4,410.5,237.3,400,227.9z" />
+        </g>
+        <g id="northAmerica" onclick="selectContinent(this)">
+          <path id="northAmerica_1_" class="st0" d="M99,54.9c0,0,8.5-2,12.5,0s3.5,6-3.5,7.5s-35.5,18.5-45.5,26c0,0-14.5,8-23,8
+		s-5.5,7.5-8,11.5s-18,21.5-18,21.5c-4.5,10,3.5,18,0,24s-3.5,22.5,13.5,18c13.5-10.5,21-26,27.5-17.5l0.5,9.5l13,0.5
+		c6-6.5,20-29.5,38-28.5s28,2.5,33.5,8.5l12-10c0,0,0.5-8,0-11.5s0.2-20,0.2-20c7.8-6,19.3-21.5,17.3,1h11l14.5-13.5l7-0.5
+		c13.5-6,28.3-21,28.3-21l3.7-12h-16.7c-5.3-8-8.3-16-13.8-14.5l-0.5-5.5c9.5,0,10-9.5-12.5-4l-3-4.5c0,0-18,11.5-37.5,2.5
+		c-27,7.5-35.5,15.5-39.5,16s-13-0.5-13-0.5C91,52.4,99,54.9,99,54.9z" />
+        </g>
+      </svg>
+
+    </div>
+  </main>
+  <footer class="page__footer">
+    <h2 class="heading">Select a Continent!</h2>
+    <!---<div class="menu__periods">
+         <input type="image" src="imgs/theme/btn-triassic.svg" id="btn-explore" class="btn__footer" alt="Triassic">
+         <input type="image" src="imgs/theme/btn-jurassic.svg" id="btn-tutorial" class="btn__footer" alt="Jurassic">
+         <input type="image" src="imgs/theme/btn-cretaceous.svg" id="btn-about" class="btn__footer" alt="Cretaceous">
+     </div>-->
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
