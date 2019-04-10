@@ -80,9 +80,13 @@ function SelectDinoUI(value){
 }
 
 function ShowInfoUI(value){
-    document.querySelector("#infoBox").style.backgroundColor = "yellowgreen";
-    document.querySelector("#infoBox").innerHTML = value;
-
+  if(document.querySelector("#infoBox").style.backgroundColor == "yellowgreen"){
+  document.querySelector("#infoBox").style.backgroundColor = "";
+  document.querySelector("#infoBox").innerHTML = "";
+  } else {
+  document.querySelector("#infoBox").style.backgroundColor = "yellowgreen";
+  document.querySelector("#infoBox").innerHTML = value;
+  }
 }
 
 function ShowFoodUI(value){
