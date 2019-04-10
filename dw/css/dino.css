@@ -129,15 +129,16 @@ img {
       display: grid;
       grid-template-rows: 1fr 1fr;
   }
-    
+
     #infoBox {
         border-radius: 25px;
+        padding-top: 15px;
     }
 
   .menu__dino {
     display: grid;
     grid-column-gap: 1em;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .btn__footer {
