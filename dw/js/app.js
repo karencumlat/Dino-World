@@ -87,6 +87,11 @@ function ShowInfoUI(value){
   document.querySelector("#infoBox").style.backgroundColor = "yellowgreen";
   document.querySelector("#infoBox").innerHTML = value;
   }
+
+  if(document.querySelector(".menu__food").style.display == "grid"){
+  document.querySelector(".menu__food").style.display = "none";
+  }
+
 }
 
 function ShowFoodUI(value){
@@ -99,4 +104,9 @@ function ShowFoodUI(value){
     document.querySelector("#food1").src = herb[0];
     document.querySelector("#food2").src = herb[1];
     document.querySelector("#food3").src = herb[2];
+
+    if(document.querySelector("#infoBox").style.backgroundColor == "yellowgreen"){
+    document.querySelector("#infoBox").style.backgroundColor = "";
+    document.querySelector("#infoBox").innerHTML = "";
+    }
 }
