@@ -340,7 +340,7 @@ function ExploreButton(){
 }
 
 function CretaButton(){
-    window.location.href = "./map-2.html";
+    window.location.href = "./cMap.html";
 }
 
 function SelectContinent(el){
