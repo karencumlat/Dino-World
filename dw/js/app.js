@@ -316,7 +316,10 @@ var handler = {
 
         if(props == "dino"){
             SelectDinoUI(value);
-            ChangeHeader(value);
+        }
+
+        if(props == "src"){
+          ChangeSrcUI(value);
         }
 
         if(props == "food"){
@@ -325,6 +328,10 @@ var handler = {
 
         if(props == "info"){
             ShowInfoUI(value);
+        }
+
+        if(props == "header"){
+          ChangeHeaderUI(value);
         }
     }
 }
@@ -354,8 +361,16 @@ function SelectDino(el){
     pkg.dino = localStorage.getItem("DinoName");
     prox.dino = pkg.dino;
 
-    pkg.src = localStorage.getItem("DinoName") + ".src[0]";
-    prox.src = pkg.src;
+    /*pkg.src = localStorage.getItem("DinoName") + "." + src[0];
+    prox.src = JSON.stringify;*/
+    // var a = JSON.stringify(el.id);
+    // console.log(a.src[0]);
+}
+
+function ChangeSrc(){
+  pkg.src = localStorage.getItem("DinoName") + ".src[0]";
+  prox.src = pkg.src
+  console.log(pkg.src);
 }
 
 function ChangeHeader(){
@@ -369,7 +384,7 @@ function ShowFood(){
 }
 
 function ShowInfo(){
-    pkg.info = pkg.dino.info;
+    pkg.info = localStorage.getItem("DinoName") + ".info"
     prox.info = pkg.info;
 }
 
@@ -379,7 +394,10 @@ function SelectDinoUI(value){
     window.location.href = "./dino.html";
     // dinoImg.src = pkg.src;
     // dinoH.innerHTML = localStorage.getItem("DinoName");
+}
 
+function ChangeSrcUI(value){
+  dinoImg.src = value;
 }
 
 function ChangeHeaderUI(value){
@@ -398,7 +416,6 @@ function ShowInfoUI(value){
   if(document.querySelector(".menu__food").style.display == "grid"){
   document.querySelector(".menu__food").style.display = "none";
   }
-
 }
 
 function ShowFoodUI(value){
