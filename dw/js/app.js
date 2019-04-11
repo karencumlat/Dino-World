@@ -340,10 +340,10 @@ function ExploreButton(){
 }
 
 function CretaButton(){
-    window.location.href = "./map-2.html";
+    window.location.href = "./cMap.html";
 }
 
-function SelectContinent(el){
+function selectContinent(el){
   var continent = el.id,
   selCont = "./c" + continent + ".html";
   window.location.href = selCont;
