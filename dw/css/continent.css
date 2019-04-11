@@ -88,7 +88,7 @@ img {
       "mn"
       "ft";
     /*background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;*/
-    background: rgb(134,194,230);
+    background: rgb(51,153,204); /* blue = sea */
     background-size: cover;
   }
 
@@ -103,7 +103,7 @@ img {
     position: fixed;
     right:2em;
   }
-  
+
   .prev__info{
     background-color: azure;
   }
@@ -115,7 +115,7 @@ img {
     display: grid;
     grid-template-columns: 32% 32% auto;
   }
-  
+
   .btn__footer{
     width: 100%;
     height: auto;
