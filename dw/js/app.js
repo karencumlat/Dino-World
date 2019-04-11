@@ -295,16 +295,18 @@ var coloradisaurus = {
     background:""
 }
 
+var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
+
 // ===== STATE VARS ===== //
 
 var pkg = {
     dino: "",
     src: "",
-    info:"",
-    food:"",
-    scale:"",
-    background:"",
-    header:""
+    info: "",
+    food: "",
+    scale: "",
+    background: "",
+    header: ""
 };
 
 
@@ -342,6 +344,8 @@ var prox = new Proxy(pkg, handler);
 
 // ===== CHANGE STATE FUNCTIONS ===== //
 
+pkg.dino = localStorage.getItem("DinoName");
+
 function ExploreButton(){
     window.location.href = "./map.html";
 }
@@ -360,17 +364,14 @@ function SelectDino(el){
     localStorage.setItem("DinoName", el.id)
     pkg.dino = localStorage.getItem("DinoName");
     prox.dino = pkg.dino;
-
-    /*pkg.src = localStorage.getItem("DinoName") + "." + src[0];
-    prox.src = JSON.stringify;*/
-    // var a = JSON.stringify(el.id);
-    // console.log(a.src[0]);
 }
 
 function ChangeSrc(){
-  pkg.src = pkg.dino.src[0];
-  prox.src = pkg.src
-  console.log(pkg.src);
+  if(dinosaurs.includes(pkg.dino) == true){
+    var D = dinosaurs.indexOf(pkg.dino);
+    pkg.src = dinosaurs[D].src;
+    prox.src = pkg.src
+  }
 }
 
 function ChangeHeader(){
@@ -379,6 +380,7 @@ function ChangeHeader(){
 }
 
 function ShowFood(){
+    console.log(pkg.dino);
     pkg.food = pkg.dino.food;
     prox.food = pkg.food;
 }
@@ -392,13 +394,10 @@ function ShowInfo(){
 
 function SelectDinoUI(value){
     window.location.href = "./dino.html";
-    // dinoImg.src = pkg.src;
-    // dinoH.innerHTML = localStorage.getItem("DinoName");
 }
 
 function ChangeSrcUI(value){
   dinoImg.src = value;
-  console.log(dinoImg.src);
 }
 
 function ChangeHeaderUI(value){
@@ -420,7 +419,7 @@ function ShowInfoUI(value){
 }
 
 function ShowFoodUI(value){
-
+    console.log(value);
     if(document.querySelector(".menu__food").style.display == "none"){
     document.querySelector(".menu__food").style.display = "grid";
     } else {
