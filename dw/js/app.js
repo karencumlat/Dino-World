@@ -368,7 +368,7 @@ function SelectDino(el){
 }
 
 function ChangeSrc(){
-  pkg.src = localStorage.getItem("DinoName") + ".src[0]";
+  pkg.src = pkg.dino.src[0];
   prox.src = pkg.src
   console.log(pkg.src);
 }
@@ -384,7 +384,7 @@ function ShowFood(){
 }
 
 function ShowInfo(){
-    pkg.info = localStorage.getItem("DinoName") + ".info"
+    pkg.info = pkg.dino.info;
     prox.info = pkg.info;
 }
 
@@ -398,6 +398,7 @@ function SelectDinoUI(value){
 
 function ChangeSrcUI(value){
   dinoImg.src = value;
+  console.log(dinoImg.src);
 }
 
 function ChangeHeaderUI(value){
