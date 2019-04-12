@@ -16,21 +16,20 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.5;
-    text-align: center;
-
-    /*background: rgb(216,216,216);*/
+  color: #222;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+  /*background: rgb(216,216,216);*/
 }
 
 /*  1.2 UX Adjustments*/
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*  1.3 Core Styling */
@@ -39,98 +38,71 @@ img {
 ====================  ====================*/
 /*  2.1 Core Layout*/
 .page {
-    margin: 0 auto;
-    padding: 1rem;
-    font-family: 'Nunito', sans-serif;
-
-    /*background: rgb(255,255,255);*/
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Nunito', sans-serif;
+  background-color: white;
 }
 
 .page,
 .page__header,
 .page__main,
 .page__footer {
-    display: grid;
-}
-
-.periods,
-.menu__periods {
-    display: grid;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .page__header {
-    grid-area: hd;
+  grid-area: hd;
 }
 
 .page__main {
-    grid-area: mn;
+  grid-area: mn;
 }
 
 .page__footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 
 .heading {
-    font-family: 'Luckiest Guy', cursive;
-    line-height: 1.6rem;
-    color: rgb(102,51,0);
-    text-transform: capitalize;
+  font-family: 'Luckiest Guy', cursive;
+  line-height: 1.6rem;
+  color: rgb(102, 51, 0);
+  text-transform: capitalize;
 }
 
 /*  2.2 Small Screens*/
 @media screen and (max-width: 39.9375em) {
-    html {
-        margin: 0 1rem;
-    }
+  html {
+    margin: 0 1rem;
+  }
 
-    .page {
-        max-width: 39.9375em;
-        height: 100vh;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "hd hd"
+  .page {
+    max-width: 39.9375em;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% auto 50%;
+    grid-template-areas: "hd hd"
       "mn mn"
       "ft ft";
-        background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;
-        background-size: cover;
-    }
+    background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;
+    background-size: cover;
+  }
 
-    .map {
-        grid-template-columns: span 2;
-        padding: 1rem;
-    }
+  /*hamburger menu btn*/
+  .header__menu {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    transform: scale(.7);
+  }
 
-    .menu__periods {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .main__menu ul,
-    .icon-text {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: block;
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        width: 38px;
-        height: 38px;
-        padding: 3px;
-    }
-
-    .main__menu ul {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    .logo__img{
-        transform: scale(1.25);
-    }
-    
-    .appBut {
-        transform: scale(.8);
-        margin: -10px;
-    }
+  /*dino world logo*/
+  .img__logo {
+    width: 100%;
+    transform: scale(1.5);
+  }
 }
 
 /*  2.3 Large Screens*/

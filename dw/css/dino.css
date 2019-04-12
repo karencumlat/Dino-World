@@ -39,7 +39,7 @@ img {
 /*  2.1 Core Layout*/
 .page {
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem;
   font-family: 'Nunito', sans-serif;
   /*background: rgb(255,255,255);*/
 }
@@ -49,6 +49,8 @@ img {
 .page__main,
 .page__footer {
   display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .page__header {
@@ -79,23 +81,37 @@ img {
   .page {
     max-width: 39.9375em;
     height: 100vh;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 10% auto 35%;
-    grid-template-areas: "hd"
-      "mn"
-      "ft";
+    grid-template-areas: "hd hd"
+      "mn mn"
+      "ft ft";
     background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;
     background-size: cover;
   }
 
-  .main__menu {
+  /*back/left btn*/
+  .btn-left {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    transform: scale(.7);
+  }
+
+  /*hamburger menu*/
+  .btn-menu {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    transform: scale(.7);
+  }
+
+  .page__footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
-  #dinoImage {
-  }
-
+  /* food container*/
   .menu__food {
     display: grid;
     grid-column-gap: 1em;
@@ -103,40 +119,22 @@ img {
     display: none;
   }
 
-/*  .food {
-    perspective: 40em;
-  }
-
-  .food .btn__footer {
-    transform: rotateX(40deg);
-  }*/
-
-  .btn__main {
-    width: 15%;
+  /*food btn*/
+  .btn__footer {
+    width: 100%;
     height: auto;
-    position: fixed;
-    right: 2em;
   }
 
-  .page__footer {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
+  #infoBox {
+    border-radius: 25px;
+    padding-top: 15px;
   }
 
-    #infoBox {
-        border-radius: 25px;
-        padding-top: 15px;
-    }
-
+  /*info - food - predator buttons*/
   .menu__dino {
     display: grid;
     grid-column-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .btn__footer {
-    width: 100%;
-    height: auto;
   }
 }
 

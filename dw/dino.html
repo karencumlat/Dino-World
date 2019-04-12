@@ -9,21 +9,22 @@
   <link href="css/dino.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body class="page" onload="ChangeHeader()" onload="ChangeSrc()">
   <header class="page__header">
-    <div class="main__menu">
-      <input type="image" src="imgs/theme/btn-menu.svg" id="btn-menu" class="btn__main" alt="Menu">
-    </div>
+    <button type="button" class="btn-round btn-left" onClick="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i></button>
+    <button type="button" class="btn-round btn-menu"><i class="fas fa-bars"></i></button>
   </header>
   <main class="page__main">
     <h2 id="dinoName" class="heading">Tyrannosaurus</h2>
     <div class="map">
-        <img id ="dinoImage" class="logo__img" src="imgs/dinosaurs/adult/tyrannosaurus.svg" alt=""/>
+      <img id="dinoImage" class="logo__img" src="imgs/dinosaurs/adult/tyrannosaurus.svg" alt="" />
     </div>
   </main>
-   <footer class="page__footer">
+  <footer class="page__footer">
     <div class="menu__food food">
       <input type="image" src="imgs/dinosaurs/food/btn-food-01.svg" id="food1" class="btn__footer" alt="">
       <input type="image" src="imgs/dinosaurs/food/btn-food-02.svg" id="food2" class="btn__footer " alt="">
@@ -31,13 +32,21 @@
     </div>
     <div class="menu__info info" id="infoBox">
     </div>
+<<<<<<< HEAD
      <div class="menu__dino">
          <input type="image" src="imgs/theme/btn-info.svg" id="btn-info" class="btn__footer" alt="Information" onclick="ShowInfo();ChangeScale()">
          <input type="image" src="imgs/theme/btn-food.svg" id="btn-food" class="btn__footer" alt="Food" onclick="ShowFood();ChangeScale()">
          <input type="image" src="imgs/theme/btn-predator.svg" id="btn-pre" class="btn__footer" alt="Predator">
      </div>
+=======
+    <div class="menu__dino">
+      <button type="button" class="btn-round" onclick="ShowInfo()"><i class="fas fa-info"></i></button>
+      <button type="button" class="btn-round" onclick="ShowFood()"><i class="fas fa-utensils"></i></button>
+      <button type="button" class="btn-round"><i class="fas fa-exclamation"></i></button>
+    </div>
+>>>>>>> a2b27c1cbc5a30f8d9c4b921fca8231f66f66e27
   </footer>
-    <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
