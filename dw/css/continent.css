@@ -52,6 +52,8 @@ img {
 .page__main,
 .page__footer {
   display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .page__header {
@@ -82,43 +84,39 @@ img {
   .page {
     max-width: 39.9375em;
     height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% auto 20%;
-    grid-template-areas: "hd"
-      "mn"
-      "ft";
-    /*background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% auto 40%;
+    grid-template-areas: "hd hd"
+      "mn mn"
+      "ft ft";
     background: rgb(51,153,204); /* blue = sea */
     background-size: cover;
   }
 
-  .main__menu{
-    display: grid;
-    grid-template-columns: 1fr;
+  .btn-left{
+    position: fixed;
+    top: 1em;
+    left:1em;
+    transform: scale(.7);
+  }
+  .btn-menu{
+    position: fixed;
+    top: 1em;
+    right:1em;
+    transform: scale(.7);
   }
 
-  .btn__main{
-    width: 15%;
-    height: auto;
-    position: fixed;
-    right:2em;
+  .page__main{
+    grid-row-gap: 2em;
   }
 
   .prev__info{
     background-color: azure;
   }
 
-  .page__footer{
-    grid-template-rows: 50% 50%;
-  }
-  .menu__periods{
-    display: grid;
-    grid-template-columns: 32% 32% auto;
-  }
-
-  .btn__footer{
+  .map{
     width: 100%;
-    height: auto;
+    transform: scale(1.5);
   }
 }
 

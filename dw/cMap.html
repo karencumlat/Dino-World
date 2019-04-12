@@ -5,20 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cretaceous Period | Dino World</title>
+  <title>Map | Dino World</title>
   <link href="css/map.css" rel="stylesheet" type="text/css">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body class="page">
   <header class="page__header">
-    <div class="main__menu">
-      <input type="image" src="imgs/theme/btn-menu.svg" id="btn-menu" class="btn__main" alt="Menu">
-    </div>
+    <button type="button" class="btn-round btn-left"><i class="fas fa-arrow-left" onClick="javascript:history.go(-1)"></i></button>
+    <button type="button" class="btn-round btn-menu"><i class="fas fa-bars"></i></button>
   </header>
   <main class="page__main">
-    <h2 class="heading">Select a Continent!</h2>
+    <h2 class="heading">Select a Continent</h2>
     <div class="map">
       <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
