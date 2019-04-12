@@ -8,309 +8,308 @@ var dinoImg = document.querySelector("#dinoImage"),
     dinoH = document.querySelector("#dinoName"),
     foodBut1 = document.querySelector("#food1"),
     foodBut2 = document.querySelector("#food2"),
-    buttonId;
+    buttonId,
+    dinoName = localStorage.getItem("DinoName");
 
-var tyrannosaurus = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/tyrannosaurus.svg", "../imgs/dinosaurs/baby/tyrannosaurus.svg", "../imgs/dinosaurs/adult/tyrannosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
 
-var mosasaurus = {
-    food: pesc,
-    src: ["../imgs/dinosaurs/egg/mosasaurus.svg", "../imgs/dinosaurs/baby/mosasaurus.svg", "../imgs/dinosaurs/adult/mosasaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
 
-var majungasaurus = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/majungasaurus.svg", "../imgs/dinosaurs/baby/majungasaurus.svg", "../imgs/dinosaurs/adult/majungasaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var spinosaurus = {
-    food: pesc,
-    src: ["../imgs/dinosaurs/egg/spinosaurus.svg", "../imgs/dinosaurs/baby/spinosaurus.svg", "../imgs/dinosaurs/adult/spinosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var ouranosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/ouranosaurus.svg", "../imgs/dinosaurs/baby/ouranosaurus.svg", "../imgs/dinosaurs/adult/ouranosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var khaan = {
-    food: omni,
-    src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var isisaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/isisaurus.svg", "../imgs/dinosaurs/baby/isisaurus.svg", "../imgs/dinosaurs/adult/isisaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var oviraptor = {
-    food: omni,
-    src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var ampelosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/ampelosaurus.svg", "../imgs/dinosaurs/baby/ampelosaurus.svg", "../imgs/dinosaurs/adult/ampelosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var bactrosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/bactrosaurus.svg", "../imgs/dinosaurs/baby/bactrosaurus.svg", "../imgs/dinosaurs/adult/bactrosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var velociraptor = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/velociraptor.svg", "../imgs/dinosaurs/baby/velociraptor.svg", "../imgs/dinosaurs/adult/velociraptor.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var ankylosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/ankylosaurus.svg", "../imgs/dinosaurs/baby/ankylosaurus.svg", "../imgs/dinosaurs/adult/ankylosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var pachycephalosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/pachycephalosaurus.svg", "../imgs/dinosaurs/baby/pachycephalosaurus.svg", "../imgs/dinosaurs/adult/pachycephalosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var chasmosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/chasmosaurus.svg", "../imgs/dinosaurs/baby/chasmosaurus.svg", "../imgs/dinosaurs/adult/chasmosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var bambiraptor = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/bambiraptor.svg", "../imgs/dinosaurs/baby/bambiraptor.svg", "../imgs/dinosaurs/adult/bambiraptor.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var parasaurolophus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/parasaurolophus.svg", "../imgs/dinosaurs/baby/parasaurolophus.svg", "../imgs/dinosaurs/adult/parasaurolophus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var triceratops = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/triceratops.svg", "../imgs/dinosaurs/baby/triceratops.svg", "../imgs/dinosaurs/adult/triceratops.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var antarctosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/antarctosaurus.svg", "../imgs/dinosaurs/baby/antarctosaurus.svg", "../imgs/dinosaurs/adult/antarctosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var carnotaurus = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/carnotaurus.svg", "../imgs/dinosaurs/baby/carnotaurus.svg", "../imgs/dinosaurs/adult/carnotaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var alvarezsaurus = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/alvarezsaurus.svg", "../imgs/dinosaurs/baby/alvarezsaurus.svg", "../imgs/dinosaurs/adult/alvarezsaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var irritator = {
-    food: pesc,
-    src: ["../imgs/dinosaurs/egg/irritator.svg", "../imgs/dinosaurs/baby/irritator.svg", "../imgs/dinosaurs/adult/irritator.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var stegasaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/stegasaurus.svg", "../imgs/dinosaurs/baby/stegasaurus.svg", "../imgs/dinosaurs/adult/stegasaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var camptosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/camptosaurus.svg", "../imgs/dinosaurs/baby/camptosaurus.svg", "../imgs/dinosaurs/adult/camptosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var hesperosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/hesperosaurus.svg", "../imgs/dinosaurs/baby/hesperosaurus.svg", "../imgs/dinosaurs/adult/hesperosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var brachiosaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/brachiosaurus.svg", "../imgs/dinosaurs/baby/brachiosaurus.svg", "../imgs/dinosaurs/adult/brachiosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var pterodactyl = {
-    food: pesc,
-    src: ["../imgs/dinosaurs/egg/pterodactyl.svg", "../imgs/dinosaurs/baby/pterodactyl.svg", "../imgs/dinosaurs/adult/pterodactyl.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var plesiosaurus = {
-    food: pesc,
-    src: ["../imgs/dinosaurs/egg/plesiosaurus.svg", "../imgs/dinosaurs/baby/plesiosaurus.svg", "../imgs/dinosaurs/adult/plesiosaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var chindesaurus = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/chindesaurus.svg", "../imgs/dinosaurs/baby/chindesaurus.svg", "../imgs/dinosaurs/adult/chindesaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var eoraptor = {
-    food: omni,
-    src: ["../imgs/dinosaurs/egg/eoraptor.svg", "../imgs/dinosaurs/baby/eoraptor.svg", "../imgs/dinosaurs/adult/eoraptor.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var coelophysis = {
-    food: carn,
-    src: ["../imgs/dinosaurs/egg/coelophysis.svg", "../imgs/dinosaurs/baby/coelophysis.svg", "../imgs/dinosaurs/adult/coelophysis.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var guaibasaurus = {
-    food: omni,
-    src: ["../imgs/dinosaurs/egg/guaibasaurus.svg", "../imgs/dinosaurs/baby/guaibasaurus.svg", "../imgs/dinosaurs/adult/guaibasaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var coloradisaurus = {
-    food: herb,
-    src: ["../imgs/dinosaurs/egg/coloradisaurus.svg", "../imgs/dinosaurs/baby/coloradisaurus.svg", "../imgs/dinosaurs/adult/coloradisaurus.svg"],
-    info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
-    predator:"",
-    scale:"1",
-    background:""
-}
-
-var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
+// var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
 
 // ===== STATE VARS ===== //
 
 var pkg = {
-    dino:{
-      coloradisaurus:{}
+    dino: "",
+    tyrannosaurus: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/tyrannosaurus.svg", "../imgs/dinosaurs/baby/tyrannosaurus.svg", "../imgs/dinosaurs/adult/tyrannosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
     },
-    src: "",
-    info: "",
-    food: "",
-    scale: "",
-    background: "",
+
+    mosasaurus: {
+        food: pesc,
+        src: ["../imgs/dinosaurs/egg/mosasaurus.svg", "../imgs/dinosaurs/baby/mosasaurus.svg", "../imgs/dinosaurs/adult/mosasaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    majungasaurus: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/majungasaurus.svg", "../imgs/dinosaurs/baby/majungasaurus.svg", "../imgs/dinosaurs/adult/majungasaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    spinosaurus: {
+        food: pesc,
+        src: ["../imgs/dinosaurs/egg/spinosaurus.svg", "../imgs/dinosaurs/baby/spinosaurus.svg", "../imgs/dinosaurs/adult/spinosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    ouranosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/ouranosaurus.svg", "../imgs/dinosaurs/baby/ouranosaurus.svg", "../imgs/dinosaurs/adult/ouranosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    khaan: {
+        food: omni,
+        src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    isisaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/isisaurus.svg", "../imgs/dinosaurs/baby/isisaurus.svg", "../imgs/dinosaurs/adult/isisaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    oviraptor: {
+        food: omni,
+        src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    ampelosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/ampelosaurus.svg", "../imgs/dinosaurs/baby/ampelosaurus.svg", "../imgs/dinosaurs/adult/ampelosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    bactrosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/bactrosaurus.svg", "../imgs/dinosaurs/baby/bactrosaurus.svg", "../imgs/dinosaurs/adult/bactrosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    velociraptor: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/velociraptor.svg", "../imgs/dinosaurs/baby/velociraptor.svg", "../imgs/dinosaurs/adult/velociraptor.svg"],
+        info:"The name Velociraptor means 'Speedy Thief', and with their 3.5 inch deadly claws on each foot, they aren't dino's you want to mess with!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    ankylosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/ankylosaurus.svg", "../imgs/dinosaurs/baby/ankylosaurus.svg", "../imgs/dinosaurs/adult/ankylosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    pachycephalosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/pachycephalosaurus.svg", "../imgs/dinosaurs/baby/pachycephalosaurus.svg", "../imgs/dinosaurs/adult/pachycephalosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    chasmosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/chasmosaurus.svg", "../imgs/dinosaurs/baby/chasmosaurus.svg", "../imgs/dinosaurs/adult/chasmosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    bambiraptor: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/bambiraptor.svg", "../imgs/dinosaurs/baby/bambiraptor.svg", "../imgs/dinosaurs/adult/bambiraptor.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    parasaurolophus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/parasaurolophus.svg", "../imgs/dinosaurs/baby/parasaurolophus.svg", "../imgs/dinosaurs/adult/parasaurolophus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    triceratops: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/triceratops.svg", "../imgs/dinosaurs/baby/triceratops.svg", "../imgs/dinosaurs/adult/triceratops.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    antarctosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/antarctosaurus.svg", "../imgs/dinosaurs/baby/antarctosaurus.svg", "../imgs/dinosaurs/adult/antarctosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    carnotaurus: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/carnotaurus.svg", "../imgs/dinosaurs/baby/carnotaurus.svg", "../imgs/dinosaurs/adult/carnotaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    alvarezsaurus: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/alvarezsaurus.svg", "../imgs/dinosaurs/baby/alvarezsaurus.svg", "../imgs/dinosaurs/adult/alvarezsaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    irritator: {
+        food: pesc,
+        src: ["../imgs/dinosaurs/egg/irritator.svg", "../imgs/dinosaurs/baby/irritator.svg", "../imgs/dinosaurs/adult/irritator.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    stegasaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/stegasaurus.svg", "../imgs/dinosaurs/baby/stegasaurus.svg", "../imgs/dinosaurs/adult/stegasaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    camptosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/camptosaurus.svg", "../imgs/dinosaurs/baby/camptosaurus.svg", "../imgs/dinosaurs/adult/camptosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    hesperosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/hesperosaurus.svg", "../imgs/dinosaurs/baby/hesperosaurus.svg", "../imgs/dinosaurs/adult/hesperosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    brachiosaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/brachiosaurus.svg", "../imgs/dinosaurs/baby/brachiosaurus.svg", "../imgs/dinosaurs/adult/brachiosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    pterodactyl: {
+        food: pesc,
+        src: ["../imgs/dinosaurs/egg/pterodactyl.svg", "../imgs/dinosaurs/baby/pterodactyl.svg", "../imgs/dinosaurs/adult/pterodactyl.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    plesiosaurus: {
+        food: pesc,
+        src: ["../imgs/dinosaurs/egg/plesiosaurus.svg", "../imgs/dinosaurs/baby/plesiosaurus.svg", "../imgs/dinosaurs/adult/plesiosaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    chindesaurus: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/chindesaurus.svg", "../imgs/dinosaurs/baby/chindesaurus.svg", "../imgs/dinosaurs/adult/chindesaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    eoraptor: {
+        food: omni,
+        src: ["../imgs/dinosaurs/egg/eoraptor.svg", "../imgs/dinosaurs/baby/eoraptor.svg", "../imgs/dinosaurs/adult/eoraptor.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    coelophysis: {
+        food: carn,
+        src: ["../imgs/dinosaurs/egg/coelophysis.svg", "../imgs/dinosaurs/baby/coelophysis.svg", "../imgs/dinosaurs/adult/coelophysis.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    guaibasaurus: {
+        food: omni,
+        src: ["../imgs/dinosaurs/egg/guaibasaurus.svg", "../imgs/dinosaurs/baby/guaibasaurus.svg", "../imgs/dinosaurs/adult/guaibasaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+
+    coloradisaurus: {
+        food: herb,
+        src: ["../imgs/dinosaurs/egg/coloradisaurus.svg", "../imgs/dinosaurs/baby/coloradisaurus.svg", "../imgs/dinosaurs/adult/coloradisaurus.svg"],
+        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        predator:"",
+        scale:"1",
+        background:""
+    },
+    food:"",
+    src:"",
+    info:"",
+    scale:"",
     header: ""
 };
 
@@ -322,7 +321,7 @@ var handler = {
         //What to handle
 
         if(props == "dino"){
-            SelectDinoUI(value);
+            SelectDinoUI();
         }
 
         if(props == "src"){
@@ -374,26 +373,22 @@ function SelectDino(el){
 }
 
 function ChangeSrc(){
-  pkg.dino = localStorage.getItem("DinoName");
-  pkg.src = window[pkg.dino].src;
-  // if(dinosaurs.includes(pkg.dino) == true){
-  //   var D = dinosaurs.indexOf(pkg.dino);
-  //   pkg.src = dinosaurs[D].src;
+  pkg.src = pkg[dinoName].src;
   prox.src = pkg.src
 }
 
 function ChangeHeader(){
-  pkg.header = localStorage.getItem("DinoName");
+  pkg.header = dinoName;
   prox.header = pkg.header;
 }
 
 function ShowFood(){
-    pkg.food = pkg.dino.food;
+    pkg.food = pkg[dinoName].food;
     prox.food = pkg.food;
 }
 
 function ShowInfo(){
-    pkg.info = pkg.dino.info;
+    pkg.info = pkg[dinoName].info;
     prox.info = pkg.info;
 }
 
@@ -405,12 +400,13 @@ function ChangeScale(el){
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
-function SelectDinoUI(value){
+function SelectDinoUI(){
     window.location.href = "./dino.html";
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = window[pkg.dino].src[0].replace(/""/g,"");
+  dinoImg.src = value[0];
+  console.log(value);
 }
 
 function ChangeHeaderUI(value){
@@ -431,7 +427,6 @@ function ShowInfoUI(value){
 }
 
 function ShowFoodUI(value){
-  console.log(value);
     if(document.querySelector(".menu__food").style.display == "none"){
     document.querySelector(".menu__food").style.display = "grid";
     document.querySelector("#infoBox").style.display = "none";
