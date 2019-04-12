@@ -367,11 +367,11 @@ function SelectDino(el){
 }
 
 function ChangeSrc(){
-  if(dinosaurs.includes(pkg.dino) == true){
-    var D = dinosaurs.indexOf(pkg.dino);
-    pkg.src = dinosaurs[D].src;
+  pkg.src = window[pkg.dino].src;
+  // if(dinosaurs.includes(pkg.dino) == true){
+  //   var D = dinosaurs.indexOf(pkg.dino);
+  //   pkg.src = dinosaurs[D].src;
     prox.src = pkg.src
-  }
 }
 
 function ChangeHeader(){
@@ -397,7 +397,7 @@ function SelectDinoUI(value){
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = value;
+  dinoImg.src = window[pkg.dino].src[0].replace(/""/g,"");
 }
 
 function ChangeHeaderUI(value){
