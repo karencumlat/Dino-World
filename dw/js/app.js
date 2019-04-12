@@ -7,7 +7,8 @@ var pesc = [];
 var dinoImg = document.querySelector("#dinoImage"),
     dinoH = document.querySelector("#dinoName"),
     foodBut1 = document.querySelector("#food1"),
-    foodBut2 = document.querySelector("#food2");
+    foodBut2 = document.querySelector("#food2"),
+    buttonId;
 
 var tyrannosaurus = {
     food: carn,
@@ -302,7 +303,9 @@ var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosa
 // ===== STATE VARS ===== //
 
 var pkg = {
-    dino: "",
+    dino:{
+      coloradisaurus:{}
+    },
     src: "",
     info: "",
     food: "",
@@ -385,7 +388,6 @@ function ChangeHeader(){
 }
 
 function ShowFood(){
-    console.log(pkg.dino);
     pkg.food = pkg.dino.food;
     prox.food = pkg.food;
 }
@@ -395,8 +397,9 @@ function ShowInfo(){
     prox.info = pkg.info;
 }
 
-function ChangeScale(){
-    pkg.scale = window[pkg.dino].scale;
+function ChangeScale(el){
+    buttonId = el.id;
+    pkg.scale = 1;
     prox.scale = pkg.scale;
 }
 
@@ -415,12 +418,11 @@ function ChangeHeaderUI(value){
 }
 
 function ShowInfoUI(value){
-  if(document.querySelector("#infoBox").style.backgroundColor == "yellowgreen"){
-  document.querySelector("#infoBox").style.backgroundColor = "";
-  document.querySelector("#infoBox").innerHTML = "";
+  if(document.querySelector("#infoBox").style.display == "grid"){
+  document.querySelector("#infoBox").style.display = "none";
   } else {
-  document.querySelector("#infoBox").style.backgroundColor = "yellowgreen";
   document.querySelector("#infoBox").innerHTML = value;
+  document.querySelector("#infoBox").style.display = "grid";
   }
 
   if(document.querySelector(".menu__food").style.display == "grid"){
@@ -429,20 +431,17 @@ function ShowInfoUI(value){
 }
 
 function ShowFoodUI(value){
-    console.log(value);
+  console.log(value);
     if(document.querySelector(".menu__food").style.display == "none"){
     document.querySelector(".menu__food").style.display = "grid";
-    } else {
-    document.querySelector(".menu__food").style.display = "none";
-    }
+    document.querySelector("#infoBox").style.display = "none";
     document.querySelector("#food1").src = value[0];
     document.querySelector("#food2").src = value[1];
     document.querySelector("#food3").src = value[2];
-
-    if(document.querySelector("#infoBox").style.backgroundColor == "yellowgreen"){
-    document.querySelector("#infoBox").style.backgroundColor = "";
-    document.querySelector("#infoBox").innerHTML = "";
+    } else {
+    document.querySelector(".menu__food").style.display = "none";
     }
+
 }
 
 function ChangeScaleUI(value){
@@ -450,12 +449,11 @@ function ChangeScaleUI(value){
   var littleFood = 0.05;
   var bigFood = 0.1;
   var donut = 1;
-  if(el.id == "food1"){
-      dinoImg.style.transform = "scale(" + value + littleFood + ")";
-  } else if(el.id == "food2"){
-      dinoImg.style.transform = "scale(" + value + bigFood + ")";
-  } else if(el.id == "food3"){
-      dinoImg.style.transform = "scale(" + value + donut + ")";
+  if(buttonId == "food1"){
+      dinoImg.style.transform = "scale(" + (value + littleFood) + ")";
+  } else if(buttonId == "food2"){
+      dinoImg.style.transform = "scale(" + (value + bigFood) + ")";
+  } else if(buttonId == "food3"){
+      dinoImg.style.transform = "scale(" + (value + donut) + ")";
   }
-
 }

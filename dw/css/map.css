@@ -110,6 +110,7 @@ img {
   .map {
     width: 100%;
     transform: scale(1.3);
+    margin-top: 40px;
   }
 
   /*display map for period selection*/
@@ -125,6 +126,7 @@ img {
 
   .btn-rounded {
     transform: scale(.5);
+    padding-top: 12px;
   }
 }
 

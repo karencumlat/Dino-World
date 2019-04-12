@@ -111,6 +111,12 @@ img {
     grid-template-rows: 1fr 1fr;
   }
 
+  /* Dinosaur */
+
+  #dinoImage{
+    transform: scale(1);
+  }
+
   /* food container*/
   .menu__food {
     display: grid;
@@ -128,6 +134,8 @@ img {
   #infoBox {
     border-radius: 25px;
     padding-top: 15px;
+    background-color: yellowgreen;
+    display: none;
   }
 
   /*info - food - predator buttons*/
