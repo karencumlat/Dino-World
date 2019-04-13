@@ -1,6 +1,6 @@
 // ========== DINOSAURS ========== //
 var carn = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
-var herb = [];
+var herb = ["imgs/dinosaurs/food/btn-food-04.svg", "imgs/dinosaurs/food/btn-food-05.svg", "imgs/dinosaurs/food/btn-food-06.svg"];
 var omni = [];
 var pesc = [];
 
@@ -405,7 +405,7 @@ function SelectDinoUI(){
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = value[0];
+  dinoImg.src = value[2];
   console.log(value);
 }
 
