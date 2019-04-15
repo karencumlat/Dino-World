@@ -115,6 +115,7 @@ img {
 
   #dinoImage{
     transform: scale(1);
+    margin-top: 150px;
   }
 
   /* food container*/
@@ -133,9 +134,11 @@ img {
 
   #infoBox {
     border-radius: 25px;
-    padding-top: 15px;
     background-color: yellowgreen;
     display: none;
+    font-size: 11pt;
+    text-align: center;;
+    padding:7px;
   }
 
   /*info - food - predator buttons*/

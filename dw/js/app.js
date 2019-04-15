@@ -1,21 +1,23 @@
-// ========== DINOSAURS ========== //
+// ===== STATE VARS ===== //
+
+// dino diets
 var carn = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
 var herb = ["imgs/dinosaurs/food/btn-food-04.svg", "imgs/dinosaurs/food/btn-food-05.svg", "imgs/dinosaurs/food/btn-food-06.svg"];
-var omni = [];
+var omni = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-07.svg", "imgs/dinosaurs/food/btn-food-08.svg"];
 var pesc = [];
 
 var dinoImg = document.querySelector("#dinoImage"),
+    // dinoH is the header appearing above the dino's in the dino.html
     dinoH = document.querySelector("#dinoName"),
     foodBut1 = document.querySelector("#food1"),
     foodBut2 = document.querySelector("#food2"),
+    // buttonId is to store the id of the food buttons when clicked
     buttonId,
-    dinoName = localStorage.getItem("DinoName");
-
-
+    // dinoName is for storing the sleected dino's name as a reference for said dinos specific properties
+    dinoName = localStorage.getItem("DinoName"),
+    pgmn = document.querySelector("#page__main");
 
 // var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
-
-// ===== STATE VARS ===== //
 
 var pkg = {
     dino: "",
@@ -31,7 +33,7 @@ var pkg = {
     mosasaurus: {
         food: pesc,
         src: ["../imgs/dinosaurs/egg/mosasaurus.svg", "../imgs/dinosaurs/baby/mosasaurus.svg", "../imgs/dinosaurs/adult/mosasaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The mosasaurus was an aquatic dinosaur that is said to be about 50-foot long! Their closest relatives today are snakes and comodo dragons.",
         predator:"",
         scale:"1",
         background:""
@@ -40,25 +42,25 @@ var pkg = {
     majungasaurus: {
         food: carn,
         src: ["../imgs/dinosaurs/egg/majungasaurus.svg", "../imgs/dinosaurs/baby/majungasaurus.svg", "../imgs/dinosaurs/adult/majungasaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
         predator:"",
-        scale:"1",
+        scale: 1.5,
         background:""
     },
 
     spinosaurus: {
         food: pesc,
         src: ["../imgs/dinosaurs/egg/spinosaurus.svg", "../imgs/dinosaurs/baby/spinosaurus.svg", "../imgs/dinosaurs/adult/spinosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The spinosaurus is one of the largest meat eating dinosaurs of all time, even bigger than the tyrannosaurus rex! It also has a spine that grew over 5 feet!",
         predator:"",
-        scale:"1",
+        scale: "1",
         background:""
     },
 
     ouranosaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/ouranosaurus.svg", "../imgs/dinosaurs/baby/ouranosaurus.svg", "../imgs/dinosaurs/adult/ouranosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The name ouranosaurus means 'brave lizard'. It is believed that the big sail on it's back was used to keep it cool. Though they may have used it to attract a mate too!",
         predator:"",
         scale:"1",
         background:""
@@ -67,16 +69,16 @@ var pkg = {
     khaan: {
         food: omni,
         src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The khaan was a feathered dinosaur with a beak! Dinosaurs closest living relatives today aren't lizards but birds!",
         predator:"",
-        scale:"1",
+        scale:"3",
         background:""
     },
 
     isisaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/isisaurus.svg", "../imgs/dinosaurs/baby/isisaurus.svg", "../imgs/dinosaurs/adult/isisaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The isisaurus inhabited what is today India. They differ from their fellow therapods due to their 'shorter' necks",
         predator:"",
         scale:"1",
         background:""
@@ -84,8 +86,8 @@ var pkg = {
 
     oviraptor: {
         food: omni,
-        src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        src: ["../imgs/dinosaurs/egg/oviraptor.svg", "../imgs/dinosaurs/baby/oviraptor.svg", "../imgs/dinosaurs/adult/oviraptor.svg"],
+        info:"oviraptor means 'egg thief', it was given the name when they discovered its fossil ontop of a nest of eggs. However later they have discovered it was its own eggs, so perhaps not so bad after all!",
         predator:"",
         scale:"1",
         background:""
@@ -94,7 +96,7 @@ var pkg = {
     ampelosaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/ampelosaurus.svg", "../imgs/dinosaurs/baby/ampelosaurus.svg", "../imgs/dinosaurs/adult/ampelosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"ampelosaurus is said to have been specialized at eating vegetation that was of medium height. It also had spiky bone armor that grew on its back!",
         predator:"",
         scale:"1",
         background:""
@@ -103,7 +105,7 @@ var pkg = {
     bactrosaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/bactrosaurus.svg", "../imgs/dinosaurs/baby/bactrosaurus.svg", "../imgs/dinosaurs/adult/bactrosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The bactrosaurus was a dinosaur who was prone to tumors. It's not known for what reason the poor bactrosaurus suffered from them but paleontologists believe it could be environmental or genetic reasons",
         predator:"",
         scale:"1",
         background:""
@@ -121,16 +123,16 @@ var pkg = {
     ankylosaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/ankylosaurus.svg", "../imgs/dinosaurs/baby/ankylosaurus.svg", "../imgs/dinosaurs/adult/ankylosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
         predator:"",
-        scale:"1",
+        scale: 2,
         background:""
     },
 
     pachycephalosaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/pachycephalosaurus.svg", "../imgs/dinosaurs/baby/pachycephalosaurus.svg", "../imgs/dinosaurs/adult/pachycephalosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The pachycephalosaurus had a reall thick head, in fact its skull roof was up to 10 inches thick!",
         predator:"",
         scale:"1",
         background:""
@@ -139,7 +141,7 @@ var pkg = {
     chasmosaurus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/chasmosaurus.svg", "../imgs/dinosaurs/baby/chasmosaurus.svg", "../imgs/dinosaurs/adult/chasmosaurus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The chasmosaurus was as heavy as hippo, and could run as fast as a rhino! Luckily it wouldnt run after us since it was a herbivore",
         predator:"",
         scale:"1",
         background:""
@@ -148,7 +150,7 @@ var pkg = {
     bambiraptor: {
         food: carn,
         src: ["../imgs/dinosaurs/egg/bambiraptor.svg", "../imgs/dinosaurs/baby/bambiraptor.svg", "../imgs/dinosaurs/adult/bambiraptor.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"bambiraptor was a little bird-like dinosaur which could run as fast as a chicken!",
         predator:"",
         scale:"1",
         background:""
@@ -157,7 +159,7 @@ var pkg = {
     parasaurolophus: {
         food: herb,
         src: ["../imgs/dinosaurs/egg/parasaurolophus.svg", "../imgs/dinosaurs/baby/parasaurolophus.svg", "../imgs/dinosaurs/adult/parasaurolophus.svg"],
-        info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+        info:"The parasaurolophus was a dinosaur that could walk on both two and four legs! It's head crest is believed to attract mates, but also to increase it's hearing!",
         predator:"",
         scale:"1",
         background:""
@@ -352,26 +354,31 @@ var prox = new Proxy(pkg, handler);
 
 // ===== CHANGE STATE FUNCTIONS ===== //
 
+// index.html page
 function ExploreButton(){
     window.location.href = "./map.html";
 }
 
+// map.html page
 function CretaButton(){
     window.location.href = "./cMap.html";
 }
 
+// cMap.htlm page
 function selectContinent(el){
   var continent = el.id,
   selCont = "./c" + continent + ".html";
   window.location.href = selCont;
 }
 
+// any of the specified continent pages
 function SelectDino(el){
     localStorage.setItem("DinoName", el.id)
     pkg.dino = localStorage.getItem("DinoName");
     prox.dino = pkg.dino;
 }
 
+// dino.html page
 function ChangeSrc(){
   pkg.src = pkg[dinoName].src;
   prox.src = pkg.src
@@ -394,9 +401,12 @@ function ShowInfo(){
 
 function ChangeScale(el){
     buttonId = el.id;
-    pkg.scale = 1;
+    pkg.scale =pkg[dinoName].scale;
     prox.scale = pkg.scale;
 }
+
+// Drag and drop food
+
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
@@ -405,8 +415,7 @@ function SelectDinoUI(){
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = value[2];
-  console.log(value);
+  dinoImg.src = value[0];
 }
 
 function ChangeHeaderUI(value){
@@ -440,15 +449,16 @@ function ShowFoodUI(value){
 }
 
 function ChangeScaleUI(value){
-  var currentScale = value;
+  var originalScale = value;
+  var currentScale;
   var littleFood = 0.05;
   var bigFood = 0.1;
-  var donut = 1;
+  var donut = 0.7;
   if(buttonId == "food1"){
-      dinoImg.style.transform = "scale(" + (value + littleFood) + ")";
+      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
   } else if(buttonId == "food2"){
-      dinoImg.style.transform = "scale(" + (value + bigFood) + ")";
+      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
   } else if(buttonId == "food3"){
-      dinoImg.style.transform = "scale(" + (value + donut) + ")";
+      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
   }
 }
