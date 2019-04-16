@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 772.9 772.9" style="enable-background:new 0 0 772.9 772.9;" xml:space="preserve">
+=======
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 599.8 599.8" style="enable-background:new 0 0 599.8 599.8;" xml:space="preserve">
+>>>>>>> d01c875af381da5c6edd8bd8c1c4c027b3d81f37
 <style type="text/css">
 	.st0{fill:#F6F08A;}
 	.st1{fill:#FCF7BC;}
 </style>
 <g id="E-Hespo">
+<<<<<<< HEAD
 	<ellipse class="st0" cx="386.5" cy="386.8" rx="277" ry="335.7"/>
 	<circle class="st1" cx="352.1" cy="297.3" r="51.4"/>
 	<circle class="st1" cx="504.9" cy="551.3" r="37.5"/>
@@ -14,5 +21,14 @@
 	<circle class="st1" cx="539.8" cy="406.1" r="19.3"/>
 	<circle class="st1" cx="463.2" cy="156.9" r="32"/>
 	<circle class="st1" cx="207" cy="203.7" r="16.9"/>
+=======
+	<ellipse class="st0" cx="299.9" cy="299.9" rx="237.2" ry="287.5"/>
+	<circle class="st1" cx="270.4" cy="223.2" r="44"/>
+	<circle class="st1" cx="401.2" cy="440.7" r="32.1"/>
+	<circle class="st1" cx="203.1" cy="398.3" r="42.4"/>
+	<circle class="st1" cx="431.1" cy="316.4" r="16.5"/>
+	<circle class="st1" cx="365.6" cy="103" r="27.4"/>
+	<circle class="st1" cx="146.1" cy="143.1" r="14.5"/>
+>>>>>>> d01c875af381da5c6edd8bd8c1c4c027b3d81f37
 </g>
 </svg>

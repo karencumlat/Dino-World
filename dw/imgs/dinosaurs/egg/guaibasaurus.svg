@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 700.8 700.8" style="enable-background:new 0 0 700.8 700.8;" xml:space="preserve">
+=======
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 599.8 599.8" style="enable-background:new 0 0 599.8 599.8;" xml:space="preserve">
+>>>>>>> d01c875af381da5c6edd8bd8c1c4c027b3d81f37
 <style type="text/css">
 	.st0{fill:#D9E9B6;}
 	.st1{fill:#CEB9DA;}
 </style>
 <g id="E-Gui">
+<<<<<<< HEAD
 	<ellipse class="st0" cx="351.9" cy="350.4" rx="208.7" ry="284.3"/>
 	<path class="st1" d="M328.1,126.1c0,0-110.1,14.6-84.4,62.3c25.7,47.7,146.9-25.7,198.3,0c51.5,25.7-290.1,68-242.4,87.3
 		C247.3,295,552.2,247,508,287.5c-44,40.5-391.1,47.9-313,69.9c78.1,22,376.8-30.9,317.4,21.2c-59.5,52.1-353.2,66.8-243.1,85.2
 		c110.1,18.4,253.4-55.1,202,0S254.7,504.3,313.5,519c58.8,14.7,51.3,64.6,51.3,64.6"/>
+=======
+	<ellipse class="st0" cx="299.9" cy="299.9" rx="211.1" ry="287.5"/>
+	<path class="st1" d="M275.8,73.1c0,0-111.4,14.7-85.4,63c26,48.3,148.6-26,200.5,0c52,26-293.4,68.7-245.1,88.2s356.5-29,311.9,12
+		c-44.5,41-395.5,48.5-316.5,70.7c78.9,22.3,381-31.3,321,21.5C402.1,381.2,105,396,216.4,414.6c111.4,18.6,256.2-55.7,204.3,0
+		S201.6,455.5,261,470.3s51.8,65.3,51.8,65.3"/>
+>>>>>>> d01c875af381da5c6edd8bd8c1c4c027b3d81f37
 </g>
 </svg>
