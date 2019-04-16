@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 599.8 599.8" style="enable-background:new 0 0 599.8 599.8;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#C6A6CF;}
 	.st1{fill:#F5E2B0;}
 </style>
 <g id="E-Majunga">
-	<ellipse class="st0" cx="200.12" cy="199.4" rx="23.62" ry="32.7"/>
-	<polygon class="st1" points="185.84,185.56 188.47,182.76 192.3,183.07 194.45,186.25 193.3,189.92 189.71,191.3 186.4,189.36 	"/>
-	<polygon class="st1" points="195.9,218.59 198.53,215.79 202.36,216.1 204.5,219.29 203.35,222.95 199.77,224.33 196.45,222.4 	"/>
-	<polygon class="st1" points="213.12,194.14 215.75,191.34 219.57,191.64 221.72,194.83 220.57,198.49 216.99,199.88 213.67,197.94 
-			"/>
-	<polygon class="st1" points="179.8,204.78 182.43,201.98 186.26,202.29 188.41,205.47 187.25,209.14 183.67,210.52 180.35,208.58 	
-		"/>
-	<polygon class="st1" points="200.12,198.33 202.75,195.52 206.58,195.83 208.73,199.02 207.57,202.68 203.99,204.07 200.67,202.13 
-			"/>
-	<polygon class="st1" points="201.42,177.54 204.04,174.74 207.87,175.05 210.02,178.23 208.87,181.9 205.29,183.28 201.97,181.34 	
-		"/>
+	<ellipse class="st0" cx="299.9" cy="299.9" rx="207.6" ry="287.5"/>
+	<polygon class="st1" points="174.3,178.2 197.5,153.6 231.1,156.3 250,184.3 239.9,216.5 208.4,228.7 179.3,211.6 	"/>
+	<polygon class="st1" points="262.8,468.6 285.9,444 319.6,446.7 338.4,474.7 328.3,506.9 296.8,519 267.6,502.1 	"/>
+	<polygon class="st1" points="414.2,253.6 437.3,229 470.9,231.7 489.8,259.7 479.7,291.9 448.2,304.1 419,287 	"/>
+	<polygon class="st1" points="121.3,347.2 144.4,322.6 178,325.3 196.9,353.2 186.7,385.5 155.3,397.6 126.1,380.6 	"/>
+	<polygon class="st1" points="299.9,290.5 323,265.8 356.7,268.5 375.6,296.5 365.4,328.7 333.9,340.9 304.7,323.9 	"/>
+	<polygon class="st1" points="311.3,107.7 334.3,83.1 368,85.8 386.9,113.8 376.8,146 345.3,158.2 316.1,141.1 	"/>
 </g>
 </svg>
