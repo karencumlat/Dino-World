@@ -415,7 +415,7 @@ function SelectDinoUI(){
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = value[0];
+  dinoImg.src = value[2];
 }
 
 function ChangeHeaderUI(value){
