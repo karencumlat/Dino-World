@@ -472,7 +472,7 @@ function ShowFoodUI(value){
     document.querySelector("#infoBox").style.display = "none";
     document.querySelector("#food1").src = value[0];
     document.querySelector("#food2").src = value[1];
-    document.querySelector("#food3").src = value[2];
+    // document.querySelector("#food3").src = value[2];
     } else {
     document.querySelector(".menu__food").style.display = "none";
     }
@@ -482,6 +482,7 @@ function ShowFoodUI(value){
 function ChangeScaleUI(value){
   var originalScale = value;
   var littleFood = 0.05;
+  var currentScale = pkg[dinoName].scale;
   var bigFood = 0.1;
   var donut = 0.6;
   if(pkg[dinoName].scale >= 1.6){
