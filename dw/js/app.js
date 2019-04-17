@@ -7,15 +7,15 @@ var omni = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food
 var pesc = [];
 
 var dinoImg = document.querySelector("#dinoImage"),
-    // dinoH is the header appearing above the dino's in the dino.html
-    dinoH = document.querySelector("#dinoName"),
-    foodBut1 = document.querySelector("#food1"),
-    foodBut2 = document.querySelector("#food2"),
-    // buttonId is to store the id of the food buttons when clicked
-    buttonId,
-    // dinoName is for storing the sleected dino's name as a reference for said dinos specific properties
-    dinoName = localStorage.getItem("DinoName"),
-    pgmn = document.querySelector("#page__main");
+  // dinoH is the header appearing above the dino's in the dino.html
+  dinoH = document.querySelector("#dinoName"),
+  foodBut1 = document.querySelector("#food1"),
+  foodBut2 = document.querySelector("#food2"),
+  // buttonId is to store the id of the food buttons when clicked
+  buttonId,
+  // dinoName is for storing the sleected dino's name as a reference for said dinos specific properties
+  dinoName = localStorage.getItem("DinoName"),
+  pgmn = document.querySelector("#page__main");
 
 // var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
 
@@ -44,7 +44,7 @@ var pkg = {
         src: ["imgs/dinosaurs/egg/majungasaurus.svg", "imgs/dinosaurs/baby/majungasaurus.svg", "imgs/dinosaurs/adult/majungasaurus.svg"],
         info:"The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
         predator:"",
-        scale: "1",
+        scale: 1.5,
         background:""
     },
 
@@ -125,7 +125,7 @@ var pkg = {
         src: ["imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
         info:"The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
         predator:"",
-        scale: "1",
+        scale: 2,
         background:""
     },
 
@@ -319,33 +319,33 @@ var pkg = {
 // ===== PROXY SETTINGS ===== //
 
 var handler = {
-    set:function(obj, props, value){
-        //What to handle
+  set: function(obj, props, value) {
+    //What to handle
 
-        if(props == "dino"){
-            SelectDinoUI();
-        }
-
-        if(props == "src"){
-          ChangeSrcUI(value);
-        }
-
-        if(props == "food"){
-            ShowFoodUI(value);
-        }
-
-        if(props == "info"){
-            ShowInfoUI(value);
-        }
-
-        if(props == "header"){
-          ChangeHeaderUI(value);
-        }
-
-        if(props == "scale"){
-          ChangeScaleUI(value);
-        }
+    if (props == "dino") {
+      SelectDinoUI();
     }
+
+    if (props == "src") {
+      ChangeSrcUI(value);
+    }
+
+    if (props == "food") {
+      ShowFoodUI(value);
+    }
+
+    if (props == "info") {
+      ShowInfoUI(value);
+    }
+
+    if (props == "header") {
+      ChangeHeaderUI(value);
+    }
+
+    if (props == "scale") {
+      ChangeScaleUI(value);
+    }
+  }
 }
 
 
@@ -355,38 +355,38 @@ var prox = new Proxy(pkg, handler);
 // ===== CHANGE STATE FUNCTIONS ===== //
 
 // index.html page
-function ExploreButton(){
-    window.location.href = "./map.html";
+function ExploreButton() {
+  window.location.href = "./map.html";
 }
 
 // map.html page
-function CretaButton(){
-    window.location.href = "./cMap.html";
+function CretaButton() {
+  window.location.href = "./cMap.html";
 }
 
 // cMap.htlm page
-function selectContinent(el){
+function selectContinent(el) {
   var continent = el.id,
-  selCont = "./c" + continent + ".html";
+    selCont = "./c" + continent + ".html";
   window.location.href = selCont;
 }
 
 // any of the specified continent pages
-function SelectDino(el){
-    localStorage.setItem("DinoName", el.id)
-    pkg.dino = localStorage.getItem("DinoName");
-    prox.dino = pkg.dino;
+function SelectDino(el) {
+  localStorage.setItem("DinoName", el.id)
+  pkg.dino = localStorage.getItem("DinoName");
+  prox.dino = pkg.dino;
 }
 
 // dino.html page
-function ChangeSrc(){
-  if(dinoImg.style.transform == "scale(1.6)"){
-    dinoImg.src = pkg[dinoName].src[2];
-    alert("Wow Goodjob! You've raised the little "+dinoName+" into a full grown adult!");
-  } else{
-  pkg.src = pkg[dinoName].src[1];
-  prox.src = pkg.src
-  }
+function ChangeSrc() {
+    pkg.src = pkg[dinoName].src;
+    prox.src = pkg.src;
+
+    if (dinoImg.style.transform == "scale(1.6)") {
+      dinoImg.src = pkg[dinoName].src[2];
+      alert("Wow Goodjob! You've raised the little " + dinoName + " into a full grown adult!");
+    }
 }
 
 // dinoImg.addEventListener("onchange", function(){
@@ -395,25 +395,25 @@ function ChangeSrc(){
 //   }
 // });
 
-function ChangeHeader(){
+function ChangeHeader() {
   pkg.header = dinoName;
   prox.header = pkg.header;
 }
 
-function ShowFood(){
-    pkg.food = pkg[dinoName].food;
-    prox.food = pkg.food;
+function ShowFood() {
+  pkg.food = pkg[dinoName].food;
+  prox.food = pkg.food;
 }
 
-function ShowInfo(){
-    pkg.info = pkg[dinoName].info;
-    prox.info = pkg.info;
+function ShowInfo() {
+  pkg.info = pkg[dinoName].info;
+  prox.info = pkg.info;
 }
 
-function ChangeScale(el){
-    buttonId = el.id;
-    pkg.scale =pkg[dinoName].scale;
-    prox.scale = pkg.scale;
+function ChangeScale(el) {
+  buttonId = el.id;
+  pkg.scale = pkg[dinoName].scale;
+  prox.scale = pkg.scale;
 
 }
 
@@ -422,89 +422,111 @@ function ChangeScale(el){
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
-function SelectDinoUI(){
-    window.location.href = "./dino.html";
+function SelectDinoUI() {
+  window.location.href = "./dino.html";
 }
 
-function ChangeSrcUI(value){
-  dinoImg.src = value[0];
-    if(dinoImg.src == value[0])
-    {
-      hatchEgg();
-    }
-    if(dinoImg.src == value[1] || dinoImg.src == value[2]){
-      resetDino();
-    }
+function ChangeSrcUI(value) {
+  if (dinoImg.src == value[0]) {
+    hatchEgg();
+  }
+  if (dinoImg.src == value[1] || dinoImg.src == value[2]) {
+    resetDino();
+  }else{
+    dinoImg.src = value[0];
+  }
 }
 
-function ChangeHeaderUI(value){
+function hatchEgg(){
+  var eggSpan = document.querySelector("#hatchEgg");
+  eggSpan.style.display = "none";
+  dinoImg.src = pkg[dinoName].src[1];
+}
+
+function resetDino(){
+  dinoImg.src = pkg[dinoName].src[0];
+  dinoImg.style.transform = "scale(1)";
+}
+
+function ChangeHeaderUI(value) {
   dinoH.innerHTML = value;
 }
 
-function ShowInfoUI(value){
-  if(document.querySelector("#infoBox").style.display == "grid"){
-  document.querySelector("#infoBox").style.display = "none";
+function ShowInfoUI(value) {
+  if (document.querySelector("#infoBox").style.display == "grid") {
+    document.querySelector("#infoBox").style.display = "none";
   } else {
-  document.querySelector("#infoBox").innerHTML = value;
-  document.querySelector("#infoBox").style.display = "grid";
+    document.querySelector("#infoBox").innerHTML = value;
+    document.querySelector("#infoBox").style.display = "grid";
   }
 
-  if(document.querySelector(".menu__food").style.display == "grid"){
-  document.querySelector(".menu__food").style.display = "none";
+  if (document.querySelector(".menu__food").style.display == "grid") {
+    document.querySelector(".menu__food").style.display = "none";
   }
 }
 
-function ShowFoodUI(value){
-    if(document.querySelector(".menu__food").style.display == "none"){
+function ShowFoodUI(value) {
+  if (document.querySelector(".menu__food").style.display == "none") {
     document.querySelector(".menu__food").style.display = "grid";
     document.querySelector("#infoBox").style.display = "none";
     document.querySelector("#food1").src = value[0];
     document.querySelector("#food2").src = value[1];
     // document.querySelector("#food3").src = value[2];
-    } else {
+  } else {
     document.querySelector(".menu__food").style.display = "none";
-    }
+  }
 
 }
 
-function ChangeScaleUI(value){
+function ChangeScaleUI(value) {
   var originalScale = value;
   var littleFood = 0.05;
   var currentScale = pkg[dinoName].scale;
   var bigFood = 0.1;
   var donut = 0.6;
-  if(pkg[dinoName].scale >= 1.6){
+  if (pkg[dinoName].scale >= 1.6) {
     pkg[dinoName].scale = 1.6
     ChangeSrc();
-  } else{
-  if(pkg.src == pkg[dinoName].src[0]){
-    alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!")
-  } else{
-    if(buttonId == "food1"){
+  } else {
+    if (pkg.src == pkg[dinoName].src[0]) {
+      alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!");
+    } else {
+      if (buttonId == "food1") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
         pkg[dinoName].scale = (parseFloat(value) + parseFloat(littleFood));
-        if(dinoImg.style.transform >= "scale(1.6)"){
-            dinoImg.style.transform = "scale(1.6)"
+        if (dinoImg.style.transform >= "scale(1.6)") {
+          dinoImg.style.transform = "scale(1.6)"
         }
-    } else if(buttonId == "food2"){
+      } else if (buttonId == "food2") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
         pkg[dinoName].scale = (parseFloat(value) + parseFloat(bigFood));
-        if(dinoImg.style.transform >= "scale(1.6)"){
-            dinoImg.style.transform = "scale(1.6)"
+        if (dinoImg.style.transform >= "scale(1.6)") {
+          dinoImg.style.transform = "scale(1.6)"
         }
-    } else if(buttonId == "food3"){
+      } else if (buttonId == "food3") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
-        if(dinoImg.style.transform >= "scale(1.6)"){
-            dinoImg.style.transform = "scale(1.6)"
+        if (dinoImg.style.transform >= "scale(1.6)") {
+          dinoImg.style.transform = "scale(1.6)"
         }
+      }
     }
-  }
   }
 }
 
-
-
 // DEFAULT
-if(window.location.href == "dino.html"){
-dinoImg.style.transform = "scale("+1+")";
+if (window.location.href == "dino.html") {
+  dinoImg.style.transform = "scale(" + 1 + ")";
+}
+
+function menu(){
+  var menu = document.querySelector("#ham-menu");
+  if(menu.className == "fas fa-bars"){
+    menu.className = "fas fa-times";
+  }else{
+    menu.className = "fas fa-bars";
+  }
+}
+
+function dig(){
+  alert("Digging for Dinosaurs...");
 }
