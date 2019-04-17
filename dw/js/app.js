@@ -44,7 +44,7 @@ var pkg = {
         src: ["../imgs/dinosaurs/egg/majungasaurus.svg", "../imgs/dinosaurs/baby/majungasaurus.svg", "../imgs/dinosaurs/adult/majungasaurus.svg"],
         info:"The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
         predator:"",
-        scale: 1.5,
+        scale: "1",
         background:""
     },
 
@@ -125,7 +125,7 @@ var pkg = {
         src: ["../imgs/dinosaurs/egg/ankylosaurus.svg", "../imgs/dinosaurs/baby/ankylosaurus.svg", "../imgs/dinosaurs/adult/ankylosaurus.svg"],
         info:"The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
         predator:"",
-        scale: 2,
+        scale: "1",
         background:""
     },
 
@@ -380,9 +380,19 @@ function SelectDino(el){
 
 // dino.html page
 function ChangeSrc(){
-  pkg.src = pkg[dinoName].src;
+  if(dinoImg.style.transform == "scale(1.6)"){
+    dinoImg.src = pkg[dinoName].src[2];
+  } else{
+  pkg.src = pkg[dinoName].src[1];
   prox.src = pkg.src
+  }
 }
+
+// dinoImg.addEventListener("onchange", function(){
+//   if(dinoImg.style.transform == "scale(1.6)"){
+//     dinoImg.src = pkg[dinoName].src[2];
+//   }
+// });
 
 function ChangeHeader(){
   pkg.header = dinoName;
@@ -403,12 +413,31 @@ function ChangeScale(el){
     buttonId = el.id;
     pkg.scale =pkg[dinoName].scale;
     prox.scale = pkg.scale;
+
 }
 
 // Drag and drop food
-function DropFood(){
 
-}
+// food1.addEventListener("onmousedown", function(event){
+//   if(event.onmousedown == true){
+//     CreateFood(event.pageX, event.pageY);
+//   }
+// });
+//
+// function CreateFood(x, y){
+//     var foodIcon1 = document.createElement("foodIcon1");
+//     var xPst = y + "px";
+//     var yPst = x + "px";
+//     foodIcon1.src = food1.src;
+//     foodIcon1.className = "droppedFood";
+//     foodIcon1.style.position = "absolute";
+//     foodIcon1.style.zIndex = 1000;
+//     foodIcon1.style.maxWidth = "100px";
+//     foodIcon1.style.maxHeight = "100px";
+//     foodIcon1.style.left = xPst;
+//     foodIcon1.style.top = yPst;
+//     pgmn.appendChild(foodIcon1);
+//   }
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
@@ -417,7 +446,7 @@ function SelectDinoUI(){
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = value[0];
+  dinoImg.src = value;
 }
 
 function ChangeHeaderUI(value){
@@ -452,19 +481,39 @@ function ShowFoodUI(value){
 
 function ChangeScaleUI(value){
   var originalScale = value;
-  var currentScale;
   var littleFood = 0.05;
   var bigFood = 0.1;
-  var donut = 0.7;
-  if(pkg[dinoName].src == pkg[dinoName].src[0]){
+  var donut = 0.6;
+  if(pkg[dinoName].scale >= 1.6){
+    pkg[dinoName].scale = 1.6
+    ChangeSrc();
+  } else{
+  if(pkg.src == pkg[dinoName].src[0]){
     alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!")
   } else{
     if(buttonId == "food1"){
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
+        pkg[dinoName].scale = (parseFloat(value) + parseFloat(littleFood));
+        if(dinoImg.style.transform >= "scale(1.6)"){
+            dinoImg.style.transform = "scale(1.6)"
+        }
     } else if(buttonId == "food2"){
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
+        pkg[dinoName].scale = (parseFloat(value) + parseFloat(bigFood));
+        if(dinoImg.style.transform >= "scale(1.6)"){
+            dinoImg.style.transform = "scale(1.6)"
+        }
     } else if(buttonId == "food3"){
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
+        if(dinoImg.style.transform >= "scale(1.6)"){
+            dinoImg.style.transform = "scale(1.6)"
+        }
     }
   }
+  }
 }
+
+
+
+// DEFAULT
+dinoImg.style.transform = "scale("+1+")";
