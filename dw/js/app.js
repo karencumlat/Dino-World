@@ -44,7 +44,7 @@ var pkg = {
         src: ["imgs/dinosaurs/egg/majungasaurus.svg", "imgs/dinosaurs/baby/majungasaurus.svg", "imgs/dinosaurs/adult/majungasaurus.svg"],
         info:"The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
         predator:"",
-        scale: 1.5,
+        scale: "1",
         background:""
     },
 
@@ -125,7 +125,7 @@ var pkg = {
         src: ["imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
         info:"The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
         predator:"",
-        scale: 2,
+        scale: "1",
         background:""
     },
 
@@ -380,9 +380,20 @@ function SelectDino(el){
 
 // dino.html page
 function ChangeSrc(){
-  pkg.src = pkg[dinoName].src;
+  if(dinoImg.style.transform == "scale(1.6)"){
+    dinoImg.src = pkg[dinoName].src[2];
+    alert("Wow Goodjob! You've raised the little "+dinoName+" into a full grown adult!");
+  } else{
+  pkg.src = pkg[dinoName].src[1];
   prox.src = pkg.src
+  }
 }
+
+// dinoImg.addEventListener("onchange", function(){
+//   if(dinoImg.style.transform == "scale(1.6)"){
+//     dinoImg.src = pkg[dinoName].src[2];
+//   }
+// });
 
 function ChangeHeader(){
   pkg.header = dinoName;
@@ -403,6 +414,7 @@ function ChangeScale(el){
     buttonId = el.id;
     pkg.scale =pkg[dinoName].scale;
     prox.scale = pkg.scale;
+
 }
 
 // Drag and drop food
@@ -448,7 +460,7 @@ function ShowFoodUI(value){
     document.querySelector("#infoBox").style.display = "none";
     document.querySelector("#food1").src = value[0];
     document.querySelector("#food2").src = value[1];
-    document.querySelector("#food3").src = value[2];
+    // document.querySelector("#food3").src = value[2];
     } else {
     document.querySelector(".menu__food").style.display = "none";
     }
@@ -457,35 +469,42 @@ function ShowFoodUI(value){
 
 function ChangeScaleUI(value){
   var originalScale = value;
-  var currentScale;
   var littleFood = 0.05;
+  var currentScale = pkg[dinoName].scale;
   var bigFood = 0.1;
-  var donut = 0.7;
-  if(buttonId == "food1"){
-      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
-  } else if(buttonId == "food2"){
-      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
-  } else if(buttonId == "food3"){
-      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
+  var donut = 0.6;
+  if(pkg[dinoName].scale >= 1.6){
+    pkg[dinoName].scale = 1.6
+    ChangeSrc();
+  } else{
+  if(pkg.src == pkg[dinoName].src[0]){
+    alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!")
+  } else{
+    if(buttonId == "food1"){
+        dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
+        pkg[dinoName].scale = (parseFloat(value) + parseFloat(littleFood));
+        if(dinoImg.style.transform >= "scale(1.6)"){
+            dinoImg.style.transform = "scale(1.6)"
+        }
+    } else if(buttonId == "food2"){
+        dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
+        pkg[dinoName].scale = (parseFloat(value) + parseFloat(bigFood));
+        if(dinoImg.style.transform >= "scale(1.6)"){
+            dinoImg.style.transform = "scale(1.6)"
+        }
+    } else if(buttonId == "food3"){
+        dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
+        if(dinoImg.style.transform >= "scale(1.6)"){
+            dinoImg.style.transform = "scale(1.6)"
+        }
+    }
+  }
   }
 }
-//click to hatch egg -- ui egg to baby
-function hatchEgg(){
-dinoImg.src = pkg.src[1];
-var hatchSpan = document.querySelector("#hatchEgg");
-hatchSpan.style.display = "none";
-}
 
-//click resetDino
-function resetDino(){
-  dinoImg.src = pkg.src[0];
-}
 
-function menu(){
-  var menu = document.querySelector("#ham-menu");
-  if(menu.className == "fas fa-bars"){
-    menu.className = "fas fa-times";
-  }else{
-    menu.className = "fas fa-bars";
-  }
+
+// DEFAULT
+if(window.location.href == "dino.html"){
+dinoImg.style.transform = "scale("+1+")";
 }

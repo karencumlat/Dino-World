@@ -116,6 +116,7 @@ img {
   #dinoImage{
     transform: scale(1);
     margin-top: 150px;
+    transition: transform 1s;
   }
 
   /* food container*/
