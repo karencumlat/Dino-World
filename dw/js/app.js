@@ -1,9 +1,9 @@
 // ===== STATE VARS ===== //
 
 // dino diets
-var carn = ["..imgs/dinosaurs/food/btn-food-01.svg", "..imgs/dinosaurs/food/btn-food-02.svg", "..imgs/dinosaurs/food/btn-food-03.svg"];
-var herb = ["..imgs/dinosaurs/food/btn-food-04.svg", "..imgs/dinosaurs/food/btn-food-05.svg", "..imgs/dinosaurs/food/btn-food-06.svg"];
-var omni = ["..imgs/dinosaurs/food/btn-food-01.svg", "..imgs/dinosaurs/food/btn-food-07.svg", "..imgs/dinosaurs/food/btn-food-08.svg"];
+var carn = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
+var herb = ["imgs/dinosaurs/food/btn-food-04.svg", "imgs/dinosaurs/food/btn-food-05.svg", "imgs/dinosaurs/food/btn-food-06.svg"];
+var omni = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-07.svg", "imgs/dinosaurs/food/btn-food-08.svg"];
 var pesc = [];
 
 var dinoImg = document.querySelector("#dinoImage"),
@@ -23,11 +23,7 @@ var pkg = {
     dino: "",
     tyrannosaurus: {
         food: carn,
-<<<<<<< HEAD
-        src: ["..imgs/dinosaurs/egg/tyrannosaurus.svg", "..imgs/dinosaurs/baby/tyrannosaurus.svg", "..imgs/dinosaurs/adult/tyrannosaurus.svg"],
-=======
         src: ["imgs/dinosaurs/egg/tyrannosaurus.svg", "imgs/dinosaurs/baby/tyrannosaurus.svg", "imgs/dinosaurs/adult/tyrannosaurus.svg"],
->>>>>>> 648db705b07d4e5707f5a9bbafe0428f993065ec
         info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
         predator:"",
         scale:"1",
@@ -126,11 +122,7 @@ var pkg = {
 
     ankylosaurus: {
         food: herb,
-<<<<<<< HEAD
-        src: ["..imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
-=======
         src: ["imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
->>>>>>> 648db705b07d4e5707f5a9bbafe0428f993065ec
         info:"The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
         predator:"",
         scale: "1",
