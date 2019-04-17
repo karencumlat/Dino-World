@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 709.8 709.8" style="enable-background:new 0 0 709.8 709.8;" xml:space="preserve">
-=======
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 599.8 599.8" style="enable-background:new 0 0 599.8 599.8;" xml:space="preserve">
->>>>>>> d01c875af381da5c6edd8bd8c1c4c027b3d81f37
 <style type="text/css">
 	.st0{fill:#BAD6A5;}
 	.st1{fill:#FFE2B3;}
 </style>
 <g id="E-ankylo">
-<<<<<<< HEAD
-	<ellipse class="st0" cx="355.5" cy="354.6" rx="214" ry="296.3"/>
-	<circle class="st1" cx="278.8" cy="510.7" r="24.6"/>
-	<circle class="st1" cx="211.2" cy="284" r="24.6"/>
-	<circle class="st1" cx="494.2" cy="216.3" r="24.6"/>
-	<circle class="st1" cx="414.6" cy="408.5" r="24.6"/>
-	<circle class="st1" cx="303.3" cy="191.8" r="52.6"/>
-	<circle class="st1" cx="439" cy="556.5" r="48.9"/>
-=======
 	<ellipse class="st0" cx="299.9" cy="299.9" rx="207.6" ry="287.5"/>
 	<circle class="st1" cx="225.5" cy="451.3" r="23.8"/>
 	<circle class="st1" cx="159.9" cy="231.4" r="23.8"/>
@@ -29,6 +14,5 @@
 	<circle class="st1" cx="357.2" cy="352.1" r="23.8"/>
 	<circle class="st1" cx="249.3" cy="142" r="51"/>
 	<circle class="st1" cx="380.9" cy="495.7" r="47.5"/>
->>>>>>> d01c875af381da5c6edd8bd8c1c4c027b3d81f37
 </g>
 </svg>

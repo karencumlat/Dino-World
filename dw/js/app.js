@@ -406,7 +406,9 @@ function ChangeScale(el){
 }
 
 // Drag and drop food
+function DropFood(){
 
+}
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
@@ -415,7 +417,7 @@ function SelectDinoUI(){
 }
 
 function ChangeSrcUI(value){
-  dinoImg.src = value[2];
+  dinoImg.src = value[0];
 }
 
 function ChangeHeaderUI(value){
@@ -454,11 +456,15 @@ function ChangeScaleUI(value){
   var littleFood = 0.05;
   var bigFood = 0.1;
   var donut = 0.7;
-  if(buttonId == "food1"){
-      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
-  } else if(buttonId == "food2"){
-      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
-  } else if(buttonId == "food3"){
-      dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
+  if(pkg[dinoName].src == pkg[dinoName].src[0]){
+    alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!")
+  } else{
+    if(buttonId == "food1"){
+        dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
+    } else if(buttonId == "food2"){
+        dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
+    } else if(buttonId == "food3"){
+        dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
+    }
   }
 }
