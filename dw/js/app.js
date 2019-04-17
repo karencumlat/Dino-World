@@ -23,7 +23,11 @@ var pkg = {
     dino: "",
     tyrannosaurus: {
         food: carn,
+<<<<<<< HEAD
         src: ["..imgs/dinosaurs/egg/tyrannosaurus.svg", "..imgs/dinosaurs/baby/tyrannosaurus.svg", "..imgs/dinosaurs/adult/tyrannosaurus.svg"],
+=======
+        src: ["imgs/dinosaurs/egg/tyrannosaurus.svg", "imgs/dinosaurs/baby/tyrannosaurus.svg", "imgs/dinosaurs/adult/tyrannosaurus.svg"],
+>>>>>>> 648db705b07d4e5707f5a9bbafe0428f993065ec
         info:"Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
         predator:"",
         scale:"1",
@@ -122,7 +126,11 @@ var pkg = {
 
     ankylosaurus: {
         food: herb,
+<<<<<<< HEAD
         src: ["..imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
+=======
+        src: ["imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
+>>>>>>> 648db705b07d4e5707f5a9bbafe0428f993065ec
         info:"The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
         predator:"",
         scale: "1",
@@ -388,6 +396,12 @@ function ChangeSrc(){
   prox.src = pkg.src
   }
 }
+
+// dinoImg.addEventListener("onchange", function(){
+//   if(dinoImg.style.transform == "scale(1.6)"){
+//     dinoImg.src = pkg[dinoName].src[2];
+//   }
+// });
 
 function ChangeHeader(){
   pkg.header = dinoName;
