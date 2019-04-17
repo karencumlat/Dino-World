@@ -382,6 +382,7 @@ function SelectDino(el){
 function ChangeSrc(){
   if(dinoImg.style.transform == "scale(1.6)"){
     dinoImg.src = pkg[dinoName].src[2];
+    alert("Wow Goodjob! You've raised the little "+dinoName+" into a full grown adult!");
   } else{
   pkg.src = pkg[dinoName].src[1];
   prox.src = pkg.src
@@ -517,4 +518,6 @@ function ChangeScaleUI(value){
 
 
 // DEFAULT
+if(window.location.href == "dino.html"){
 dinoImg.style.transform = "scale("+1+")";
+}
