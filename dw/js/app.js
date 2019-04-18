@@ -1,10 +1,10 @@
 // ===== STATE VARS ===== //
 
 // dino diets
-var carn = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-02.svg", "imgs/dinosaurs/food/btn-food-03.svg"];
-var herb = ["imgs/dinosaurs/food/btn-food-04.svg", "imgs/dinosaurs/food/btn-food-05.svg", "imgs/dinosaurs/food/btn-food-06.svg"];
-var omni = ["imgs/dinosaurs/food/btn-food-01.svg", "imgs/dinosaurs/food/btn-food-07.svg", "imgs/dinosaurs/food/btn-food-08.svg"];
-var pesc = [];
+var carn = ["../imgs/dinosaurs/food/btn-food-01.svg", "../imgs/dinosaurs/food/btn-food-02.svg", "../imgs/dinosaurs/food/btn-food-03.svg"];
+var herb = ["../imgs/dinosaurs/food/btn-food-04.svg", "../imgs/dinosaurs/food/btn-food-05.svg", "../imgs/dinosaurs/food/btn-food-06.svg"];
+var omni = ["../imgs/dinosaurs/food/btn-food-01.svg", "../imgs/dinosaurs/food/btn-food-07.svg", "../imgs/dinosaurs/food/btn-food-08.svg"];
+var pesc = ["../imgs/dinosaurs/food/btn-food-01.svg", "../imgs/dinosaurs/food/btn-food-07.svg", "../imgs/dinosaurs/food/btn-food-08.svg"];
 
 var dinoImg = document.querySelector("#dinoImage"),
   // dinoH is the header appearing above the dino's in the dino.html
@@ -23,7 +23,7 @@ var pkg = {
   dino: "",
   tyrannosaurus: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/tyrannosaurus.svg", "imgs/dinosaurs/baby/tyrannosaurus.svg", "imgs/dinosaurs/adult/tyrannosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/tyrannosaurus.svg", "../imgs/dinosaurs/baby/tyrannosaurus.svg", "../imgs/dinosaurs/adult/tyrannosaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -32,7 +32,7 @@ var pkg = {
 
   mosasaurus: {
     food: pesc,
-    src: ["imgs/dinosaurs/egg/mosasaurus.svg", "imgs/dinosaurs/baby/mosasaurus.svg", "imgs/dinosaurs/adult/mosasaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/mosasaurus.svg", "../imgs/dinosaurs/baby/mosasaurus.svg", "../imgs/dinosaurs/adult/mosasaurus.svg"],
     info: "The mosasaurus was an aquatic dinosaur that is said to be about 50-foot long! Their closest relatives today are snakes and comodo dragons.",
     predator: "",
     scale: "1",
@@ -41,16 +41,16 @@ var pkg = {
 
   majungasaurus: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/majungasaurus.svg", "imgs/dinosaurs/baby/majungasaurus.svg", "imgs/dinosaurs/adult/majungasaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/majungasaurus.svg", "../imgs/dinosaurs/baby/majungasaurus.svg", "../imgs/dinosaurs/adult/majungasaurus.svg"],
     info: "The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
     predator: "",
-    scale: 1.5,
+    scale: "1",
     background: ""
   },
 
   spinosaurus: {
     food: pesc,
-    src: ["imgs/dinosaurs/egg/spinosaurus.svg", "imgs/dinosaurs/baby/spinosaurus.svg", "imgs/dinosaurs/adult/spinosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/spinosaurus.svg", "../imgs/dinosaurs/baby/spinosaurus.svg", "../imgs/dinosaurs/adult/spinosaurus.svg"],
     info: "The spinosaurus is one of the largest meat eating dinosaurs of all time, even bigger than the tyrannosaurus rex! It also has a spine that grew over 5 feet!",
     predator: "",
     scale: "1",
@@ -59,7 +59,7 @@ var pkg = {
 
   ouranosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/ouranosaurus.svg", "imgs/dinosaurs/baby/ouranosaurus.svg", "imgs/dinosaurs/adult/ouranosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/ouranosaurus.svg", "../imgs/dinosaurs/baby/ouranosaurus.svg", "../imgs/dinosaurs/adult/ouranosaurus.svg"],
     info: "The name ouranosaurus means 'brave lizard'. It is believed that the big sail on it's back was used to keep it cool. Though they may have used it to attract a mate too!",
     predator: "",
     scale: "1",
@@ -68,16 +68,16 @@ var pkg = {
 
   khaan: {
     food: omni,
-    src: ["imgs/dinosaurs/egg/khaan.svg", "imgs/dinosaurs/baby/khaan.svg", "imgs/dinosaurs/adult/khaan.svg"],
+    src: ["../imgs/dinosaurs/egg/khaan.svg", "../imgs/dinosaurs/baby/khaan.svg", "../imgs/dinosaurs/adult/khaan.svg"],
     info: "The khaan was a feathered dinosaur with a beak! Dinosaurs closest living relatives today aren't lizards but birds!",
     predator: "",
-    scale: "3",
+    scale: "1",
     background: ""
   },
 
   isisaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/isisaurus.svg", "imgs/dinosaurs/baby/isisaurus.svg", "imgs/dinosaurs/adult/isisaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/isisaurus.svg", "../imgs/dinosaurs/baby/isisaurus.svg", "../imgs/dinosaurs/adult/isisaurus.svg"],
     info: "The isisaurus inhabited what is today India. They differ from their fellow therapods due to their 'shorter' necks",
     predator: "",
     scale: "1",
@@ -86,7 +86,7 @@ var pkg = {
 
   oviraptor: {
     food: omni,
-    src: ["imgs/dinosaurs/egg/oviraptor.svg", "imgs/dinosaurs/baby/oviraptor.svg", "imgs/dinosaurs/adult/oviraptor.svg"],
+    src: ["../imgs/dinosaurs/egg/oviraptor.svg", "../imgs/dinosaurs/baby/oviraptor.svg", "../imgs/dinosaurs/adult/oviraptor.svg"],
     info: "oviraptor means 'egg thief', it was given the name when they discovered its fossil ontop of a nest of eggs. However later they have discovered it was its own eggs, so perhaps not so bad after all!",
     predator: "",
     scale: "1",
@@ -95,7 +95,7 @@ var pkg = {
 
   ampelosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/ampelosaurus.svg", "imgs/dinosaurs/baby/ampelosaurus.svg", "imgs/dinosaurs/adult/ampelosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/ampelosaurus.svg", "../imgs/dinosaurs/baby/ampelosaurus.svg", "../imgs/dinosaurs/adult/ampelosaurus.svg"],
     info: "ampelosaurus is said to have been specialized at eating vegetation that was of medium height. It also had spiky bone armor that grew on its back!",
     predator: "",
     scale: "1",
@@ -104,7 +104,7 @@ var pkg = {
 
   bactrosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/bactrosaurus.svg", "imgs/dinosaurs/baby/bactrosaurus.svg", "imgs/dinosaurs/adult/bactrosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/bactrosaurus.svg", "../imgs/dinosaurs/baby/bactrosaurus.svg", "../imgs/dinosaurs/adult/bactrosaurus.svg"],
     info: "The bactrosaurus was a dinosaur who was prone to tumors. It's not known for what reason the poor bactrosaurus suffered from them but paleontologists believe it could be environmental or genetic reasons",
     predator: "",
     scale: "1",
@@ -113,7 +113,7 @@ var pkg = {
 
   velociraptor: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/velociraptor.svg", "imgs/dinosaurs/baby/velociraptor.svg", "imgs/dinosaurs/adult/velociraptor.svg"],
+    src: ["../imgs/dinosaurs/egg/velociraptor.svg", "../imgs/dinosaurs/baby/velociraptor.svg", "../imgs/dinosaurs/adult/velociraptor.svg"],
     info: "The name Velociraptor means 'Speedy Thief', and with their 3.5 inch deadly claws on each foot, they aren't dino's you want to mess with!",
     predator: "",
     scale: "1",
@@ -122,16 +122,16 @@ var pkg = {
 
   ankylosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/ankylosaurus.svg", "imgs/dinosaurs/baby/ankylosaurus.svg", "imgs/dinosaurs/adult/ankylosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/ankylosaurus.svg", "../imgs/dinosaurs/baby/ankylosaurus.svg", "../imgs/dinosaurs/adult/ankylosaurus.svg"],
     info: "The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
     predator: "",
-    scale: 2,
+    scale: "1",
     background: ""
   },
 
   pachycephalosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/pachycephalosaurus.svg", "imgs/dinosaurs/baby/pachycephalosaurus.svg", "imgs/dinosaurs/adult/pachycephalosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/pachycephalosaurus.svg", "../imgs/dinosaurs/baby/pachycephalosaurus.svg", "../imgs/dinosaurs/adult/pachycephalosaurus.svg"],
     info: "The pachycephalosaurus had a reall thick head, in fact its skull roof was up to 10 inches thick!",
     predator: "",
     scale: "1",
@@ -140,7 +140,7 @@ var pkg = {
 
   chasmosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/chasmosaurus.svg", "imgs/dinosaurs/baby/chasmosaurus.svg", "imgs/dinosaurs/adult/chasmosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/chasmosaurus.svg", "../imgs/dinosaurs/baby/chasmosaurus.svg", "../imgs/dinosaurs/adult/chasmosaurus.svg"],
     info: "The chasmosaurus was as heavy as hippo, and could run as fast as a rhino! Luckily it wouldnt run after us since it was a herbivore",
     predator: "",
     scale: "1",
@@ -149,7 +149,7 @@ var pkg = {
 
   bambiraptor: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/bambiraptor.svg", "imgs/dinosaurs/baby/bambiraptor.svg", "imgs/dinosaurs/adult/bambiraptor.svg"],
+    src: ["../imgs/dinosaurs/egg/bambiraptor.svg", "../imgs/dinosaurs/baby/bambiraptor.svg", "../imgs/dinosaurs/adult/bambiraptor.svg"],
     info: "bambiraptor was a little bird-like dinosaur which could run as fast as a chicken!",
     predator: "",
     scale: "1",
@@ -158,7 +158,7 @@ var pkg = {
 
   parasaurolophus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/parasaurolophus.svg", "imgs/dinosaurs/baby/parasaurolophus.svg", "imgs/dinosaurs/adult/parasaurolophus.svg"],
+    src: ["../imgs/dinosaurs/egg/parasaurolophus.svg", "../imgs/dinosaurs/baby/parasaurolophus.svg", "../imgs/dinosaurs/adult/parasaurolophus.svg"],
     info: "The parasaurolophus was a dinosaur that could walk on both two and four legs! It's head crest is believed to attract mates, but also to increase it's hearing!",
     predator: "",
     scale: "1",
@@ -167,7 +167,7 @@ var pkg = {
 
   triceratops: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/triceratops.svg", "imgs/dinosaurs/baby/triceratops.svg", "imgs/dinosaurs/adult/triceratops.svg"],
+    src: ["../imgs/dinosaurs/egg/triceratops.svg", "../imgs/dinosaurs/baby/triceratops.svg", "../imgs/dinosaurs/adult/triceratops.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -176,7 +176,7 @@ var pkg = {
 
   antarctosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/antarctosaurus.svg", "imgs/dinosaurs/baby/antarctosaurus.svg", "imgs/dinosaurs/adult/antarctosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/antarctosaurus.svg", "../imgs/dinosaurs/baby/antarctosaurus.svg", "../imgs/dinosaurs/adult/antarctosaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -185,7 +185,7 @@ var pkg = {
 
   carnotaurus: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/carnotaurus.svg", "imgs/dinosaurs/baby/carnotaurus.svg", "imgs/dinosaurs/adult/carnotaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/carnotaurus.svg", "../imgs/dinosaurs/baby/carnotaurus.svg", "../imgs/dinosaurs/adult/carnotaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -194,7 +194,7 @@ var pkg = {
 
   alvarezsaurus: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/alvarezsaurus.svg", "imgs/dinosaurs/baby/alvarezsaurus.svg", "imgs/dinosaurs/adult/alvarezsaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/alvarezsaurus.svg", "../imgs/dinosaurs/baby/alvarezsaurus.svg", "../imgs/dinosaurs/adult/alvarezsaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -203,7 +203,7 @@ var pkg = {
 
   irritator: {
     food: pesc,
-    src: ["imgs/dinosaurs/egg/irritator.svg", "imgs/dinosaurs/baby/irritator.svg", "imgs/dinosaurs/adult/irritator.svg"],
+    src: ["../imgs/dinosaurs/egg/irritator.svg", "../imgs/dinosaurs/baby/irritator.svg", "../imgs/dinosaurs/adult/irritator.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -212,7 +212,7 @@ var pkg = {
 
   stegasaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/stegasaurus.svg", "imgs/dinosaurs/baby/stegasaurus.svg", "imgs/dinosaurs/adult/stegasaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/stegasaurus.svg", "../imgs/dinosaurs/baby/stegasaurus.svg", "../imgs/dinosaurs/adult/stegasaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -221,7 +221,7 @@ var pkg = {
 
   camptosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/camptosaurus.svg", "imgs/dinosaurs/baby/camptosaurus.svg", "imgs/dinosaurs/adult/camptosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/camptosaurus.svg", "../imgs/dinosaurs/baby/camptosaurus.svg", "../imgs/dinosaurs/adult/camptosaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -230,7 +230,7 @@ var pkg = {
 
   hesperosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/hesperosaurus.svg", "imgs/dinosaurs/baby/hesperosaurus.svg", "imgs/dinosaurs/adult/hesperosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/hesperosaurus.svg", "../imgs/dinosaurs/baby/hesperosaurus.svg", "../imgs/dinosaurs/adult/hesperosaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -239,7 +239,7 @@ var pkg = {
 
   brachiosaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/brachiosaurus.svg", "imgs/dinosaurs/baby/brachiosaurus.svg", "imgs/dinosaurs/adult/brachiosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/brachiosaurus.svg", "../imgs/dinosaurs/baby/brachiosaurus.svg", "../imgs/dinosaurs/adult/brachiosaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -248,7 +248,7 @@ var pkg = {
 
   pterodactyl: {
     food: pesc,
-    src: ["imgs/dinosaurs/egg/pterodactyl.svg", "imgs/dinosaurs/baby/pterodactyl.svg", "imgs/dinosaurs/adult/pterodactyl.svg"],
+    src: ["../imgs/dinosaurs/egg/pterodactyl.svg", "../imgs/dinosaurs/baby/pterodactyl.svg", "../imgs/dinosaurs/adult/pterodactyl.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -257,7 +257,7 @@ var pkg = {
 
   plesiosaurus: {
     food: pesc,
-    src: ["imgs/dinosaurs/egg/plesiosaurus.svg", "imgs/dinosaurs/baby/plesiosaurus.svg", "imgs/dinosaurs/adult/plesiosaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/plesiosaurus.svg", "../imgs/dinosaurs/baby/plesiosaurus.svg", "../imgs/dinosaurs/adult/plesiosaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -266,7 +266,7 @@ var pkg = {
 
   chindesaurus: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/chindesaurus.svg", "imgs/dinosaurs/baby/chindesaurus.svg", "imgs/dinosaurs/adult/chindesaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/chindesaurus.svg", "../imgs/dinosaurs/baby/chindesaurus.svg", "../imgs/dinosaurs/adult/chindesaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -275,7 +275,7 @@ var pkg = {
 
   eoraptor: {
     food: omni,
-    src: ["imgs/dinosaurs/egg/eoraptor.svg", "imgs/dinosaurs/baby/eoraptor.svg", "imgs/dinosaurs/adult/eoraptor.svg"],
+    src: ["../imgs/dinosaurs/egg/eoraptor.svg", "../imgs/dinosaurs/baby/eoraptor.svg", "../imgs/dinosaurs/adult/eoraptor.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -284,7 +284,7 @@ var pkg = {
 
   coelophysis: {
     food: carn,
-    src: ["imgs/dinosaurs/egg/coelophysis.svg", "imgs/dinosaurs/baby/coelophysis.svg", "imgs/dinosaurs/adult/coelophysis.svg"],
+    src: ["../imgs/dinosaurs/egg/coelophysis.svg", "../imgs/dinosaurs/baby/coelophysis.svg", "../imgs/dinosaurs/adult/coelophysis.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -293,7 +293,7 @@ var pkg = {
 
   guaibasaurus: {
     food: omni,
-    src: ["imgs/dinosaurs/egg/guaibasaurus.svg", "imgs/dinosaurs/baby/guaibasaurus.svg", "imgs/dinosaurs/adult/guaibasaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/guaibasaurus.svg", "../imgs/dinosaurs/baby/guaibasaurus.svg", "../imgs/dinosaurs/adult/guaibasaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -302,7 +302,7 @@ var pkg = {
 
   coloradisaurus: {
     food: herb,
-    src: ["imgs/dinosaurs/egg/coloradisaurus.svg", "imgs/dinosaurs/baby/coloradisaurus.svg", "imgs/dinosaurs/adult/coloradisaurus.svg"],
+    src: ["../imgs/dinosaurs/egg/coloradisaurus.svg", "../imgs/dinosaurs/baby/coloradisaurus.svg", "../imgs/dinosaurs/adult/coloradisaurus.svg"],
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
@@ -388,12 +388,6 @@ function ChangeSrc() {
     alert("Wow Goodjob! You've raised the little " + dinoName + " into a full grown adult!");
   }
 }
-
-// dinoImg.addEventListener("onchange", function(){
-//   if(dinoImg.style.transform == "scale(1.6)"){
-//     dinoImg.src = pkg[dinoName].src[2];
-//   }
-// });
 
 function ChangeHeader() {
   pkg.header = dinoName;
