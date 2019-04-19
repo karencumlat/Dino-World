@@ -68,8 +68,11 @@ img {
 .heading {
   font-family: 'Luckiest Guy', cursive;
   line-height: 1.6rem;
-  color: rgb(102, 51, 0);
+  /* color: rgb(102, 51, 0); */
+  color: rgb(249, 185, 107);
   text-transform: capitalize;
+  letter-spacing: 2.5px;
+  text-shadow: 1px 1px black;
 }
 
 /*  2.2 Small Screens*/
@@ -127,6 +130,8 @@ img {
   .btn-rounded {
     transform: scale(.5);
     padding-top: 12px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px black;
   }
 }
 

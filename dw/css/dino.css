@@ -68,7 +68,10 @@ img {
 .heading {
   font-family: 'Luckiest Guy', cursive;
   line-height: 1.6rem;
-  color: rgb(102, 51, 0);
+  /* color: rgb(102, 51, 0); */
+  color: rgb(249, 185, 107);
+  letter-spacing: 2.5px;
+  text-shadow: 1px 1px black;
   text-transform: capitalize;
 }
 
@@ -121,10 +124,9 @@ img {
 
   /* food container*/
   .menu__food {
-    display: grid;
+    display: none;
     grid-column-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
-    display: none;
   }
 
   /*food btn*/
@@ -132,6 +134,7 @@ img {
     width: 100%;
     height: auto;
   }
+
 
   #infoBox {
     border-radius: 25px;
@@ -144,7 +147,7 @@ img {
 
   /*info - food - predator buttons*/
   .menu__dino {
-    display: grid;
+    display: none;
     grid-column-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
   }

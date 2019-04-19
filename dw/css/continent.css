@@ -71,8 +71,11 @@ img {
 .heading {
   font-family: 'Luckiest Guy', cursive;
   line-height: 1.6rem;
-  color: rgb(102, 51, 0);
+  /* color: rgb(102, 51, 0); */
+  color: rgb(249, 185, 107);
   text-transform: capitalize;
+  letter-spacing: 2.5px;
+  text-shadow: 1px 1px black;
 }
 
 /*  2.2 Small Screens*/
