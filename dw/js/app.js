@@ -15,7 +15,7 @@ var dinoImg = document.querySelector("#dinoImage"),
   buttonId,
   // dinoName is for storing the sleected dino's name as a reference for said dinos specific properties
   dinoName = localStorage.getItem("DinoName"),
-  pgmn = document.querySelector("#page__main");
+  pgmn = document.querySelector(".page__main");
 
 // var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
 
@@ -412,6 +412,48 @@ function ChangeScale(el) {
 
 // Drag and drop food
 
+// function CreateFood(){
+//     //this function creates food
+//     var newFood = document.createElement("img");
+//     newFood.src = pkg[dinoName].food[0];
+//     newFood.className = "food";;
+//     newFood.style.width =50 + "px";
+//     newSnow.style.height = 50 + "px";
+//     newSnow.style.top = "-100px";
+//     newSnow.style.left = "100px";
+//     //multiple classes
+//     //newSnow.classList = ["snows", "class2"];
+//     pgmn.appendChild(newFood);
+// }
+
+// +1 and +2 when dino features
+function EatFeedback(num){
+  var feedBack = document.createElement("h4");
+  feedBack.innerHTML = num;
+  feedBack.id = "feedback";
+  feedBack.style.position = "absolute";
+  feedBack.style.top = "150px";
+  feedBack.style.left = "150px";
+  feedBack.style.opacity = "1";
+  pgmn.appendChild(feedBack);
+
+  MoveFeedback(feedBack);
+}
+
+function MoveFeedback(fdb){
+  setTimeout(function() {
+    fdb.style.left = "100px";
+    fdb.style.top = "100px";
+    fdb.style.opacity = 0;
+      setTimeout(function(){
+        RemoveFeedBack(fdb);
+      },2000);
+  },100);
+}
+
+function RemoveFeedBack(fdb){
+  fdb.remove();
+}
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
@@ -494,12 +536,14 @@ function ChangeScaleUI(value) {
     } else if (buttonId == "food1") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
         pkg[dinoName].scale = (parseFloat(value) + parseFloat(littleFood));
+        EatFeedback("+1");
         if (dinoImg.style.transform >= "scale(1.6)") {
           dinoImg.style.transform = "scale(1.6)";
         }
       } else if (buttonId == "food2") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
         pkg[dinoName].scale = (parseFloat(value) + parseFloat(bigFood));
+        EatFeedback("+2")
         if (dinoImg.style.transform >= "scale(1.6)") {
           dinoImg.style.transform = "scale(1.6)";
         }
