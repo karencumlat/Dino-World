@@ -4,7 +4,7 @@
 var carn = ["../imgs/dinosaurs/food/btn-food-01.svg", "../imgs/dinosaurs/food/btn-food-02.svg", "../imgs/dinosaurs/food/btn-food-03.svg"];
 var herb = ["../imgs/dinosaurs/food/btn-food-04.svg", "../imgs/dinosaurs/food/btn-food-05.svg", "../imgs/dinosaurs/food/btn-food-06.svg"];
 var omni = ["../imgs/dinosaurs/food/btn-food-01.svg", "../imgs/dinosaurs/food/btn-food-07.svg", "../imgs/dinosaurs/food/btn-food-08.svg"];
-var pesc = ["../imgs/dinosaurs/food/btn-food-10.svg", "../imgs/dinosaurs/food/btn-food-11.svg", "../imgs/dinosaurs/food/btn-food-08.svg"];
+var pesc = ["../imgs/dinosaurs/food/btn-food-12.svg", "../imgs/dinosaurs/food/btn-food-11.svg", "../imgs/dinosaurs/food/btn-food-08.svg"];
 
 var dinoImg = document.querySelector("#dinoImage"),
   // dinoH is the header appearing above the dino's in the dino.html
