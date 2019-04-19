@@ -429,7 +429,7 @@ function hatchEgg() {
   eggSpan.style.display = "none";
   document.querySelector(".menu__dino").style.display = "grid";
 
-  if(pkg[dinoName].src[0] == pkg[dinoName].src[0]){
+  if(dinoImg.src.includes("imgs/dinosaurs/egg")){
       dinoImg.src = pkg[dinoName].src[1];
   }
 }
