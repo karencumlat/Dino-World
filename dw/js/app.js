@@ -15,7 +15,10 @@ var dinoImg = document.querySelector("#dinoImage"),
   buttonId,
   // dinoName is for storing the sleected dino's name as a reference for said dinos specific properties
   dinoName = localStorage.getItem("DinoName"),
-  pgmn = document.querySelector(".page__main");
+  pgmn = document.querySelector(".page__main"),
+  // Reference to grab food icon
+  foodref,
+  foodElem;
 
 // var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
 
@@ -412,21 +415,77 @@ function ChangeScale(el) {
 
 // Drag and drop food
 
-// function CreateFood(){
-//     //this function creates food
-//     var newFood = document.createElement("img");
-//     newFood.src = pkg[dinoName].food[0];
-//     newFood.className = "food";;
-//     newFood.style.width =50 + "px";
-//     newSnow.style.height = 50 + "px";
-//     newSnow.style.top = "-100px";
-//     newSnow.style.left = "100px";
-//     //multiple classes
-//     //newSnow.classList = ["snows", "class2"];
-//     pgmn.appendChild(newFood);
-// }
+function CreateFood(num){
+    //this function creates food
+    var newFood = document.createElement("img");
+    newFood.src = pkg[dinoName].food[num];
+    newFood.id = "food";;
+    newFood.style.width = "50px";
+    newFood.style.height = "50px";
+    newFood.style.position = "absolute";
+    newFood.style.top = "200px";
+    newFood.style.left = "275px";
+    pgmn.appendChild(newFood);
+    MoveFood(newFood);
+    foodref = newFood;
+    foodElem = document.querySelector("#food");
+}
 
-// +1 and +2 when dino features
+function MoveFood(nf){
+  setTimeout(function() {
+    nf.style.top = "450px";
+  },100);
+}
+
+// pgmn.addEventListener("click", function(){
+//   if(event.target.id == foodElem){
+//       RemoveFood();
+//   }
+// });
+
+function RemoveFood(){
+  foodref.remove();
+  CreateSplash();
+}
+
+// Splash effect when eating food
+
+function CreateSplash(){
+    //this function creates food
+    var splash = document.createElement("img");
+    splash.id = "splash";
+
+    if(pkg[dinoName].food = "herb"){
+      splash.src = "../imgs/dinosaurs/Splashes/splash-01.svg";
+    } else if(pkg[dinoName].food == "carn"){
+      splash.src = "../imgs/dinosaurs/Splashes/splash-02.svg";
+    } else if(pkg[dinoName].food == "omni"){
+      splash.src = "../imgs/dinosaurs/Splashes/splash-01.svg";
+    } else if(pkg[dinoName].food == "pesc"){
+      splash.src = "../imgs/dinosaurs/Splashes/splash-03.svg"
+    }
+
+    splash.style.width = "50px";
+    splash.style.height = "50px";
+    splash.style.position = "absolute";
+    splash.style.top = "450px";
+    splash.style.transform = "scale(.5)";
+    splash.style.left = "275px";
+    pgmn.appendChild(splash);
+    setTimeout(function(){
+        ScaleSplash(splash);
+    }, 100);
+}
+
+function ScaleSplash(splash){
+  splash.style.transform = "scale(3)";
+  setTimeout(function(){
+    splash.style.opacity = 0;
+  }, 300);
+}
+
+
+// +1 and +2 when dino eats food
 function EatFeedback(num){
   var feedBack = document.createElement("h4");
   feedBack.innerHTML = num;
