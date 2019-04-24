@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs><style>.cls-1{fill:#c66;}.cls-2{fill:#933;}</style></defs><title>eAlvarezsaurus</title><g id="Layer_17" data-name="Layer 17"><path class="cls-1" d="M317.81,587.46c-191.69,0-220.31-169.8-220.31-271,0-161.89,103-303.9,220.31-303.9,89.76,0,184.69,170.3,184.69,331.31C502.5,500.71,393.3,587.46,317.81,587.46Z"/><circle class="cls-2" cx="349.33" cy="415.11" r="16.44"/><circle class="cls-2" cx="292.08" cy="467.18" r="8.53"/><circle class="cls-2" cx="222.66" cy="467.18" r="21.32"/><circle class="cls-2" cx="349.33" cy="33.86" r="12.79"/><circle class="cls-2" cx="370.04" cy="46.65" r="4.26"/><circle class="cls-2" cx="370.04" cy="415.11" r="12.79"/><circle class="cls-2" cx="431.55" cy="291.47" r="25.58"/><circle class="cls-2" cx="118.82" cy="398.66" r="12.79"/><circle class="cls-2" cx="144.39" cy="467.18" r="4.26"/><circle class="cls-2" cx="165.71" cy="518.94" r="4.26"/><circle class="cls-2" cx="405.97" cy="278.68" r="12.79"/><circle class="cls-2" cx="365.78" cy="344.76" r="12.79"/><circle class="cls-2" cx="309.14" cy="518.94" r="12.79"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#CC6666;}
+	.st1{fill:#993333;}
+</style>
+<title>eAlvarezsaurus</title>
+<g id="Layer_17">
+	<path class="st0" d="M317.8,587.5c-191.7,0-220.3-169.8-220.3-271c0-161.9,103-303.9,220.3-303.9c89.8,0,184.7,170.3,184.7,331.3
+		C502.5,500.7,393.3,587.5,317.8,587.5z"/>
+	<circle class="st1" cx="349.3" cy="415.1" r="16.4"/>
+	<circle class="st1" cx="292.1" cy="467.2" r="8.5"/>
+	<circle class="st1" cx="222.7" cy="467.2" r="21.3"/>
+	<circle class="st1" cx="349.3" cy="33.9" r="12.8"/>
+	<circle class="st1" cx="370" cy="46.7" r="4.3"/>
+	<circle class="st1" cx="370" cy="415.1" r="12.8"/>
+	<circle class="st1" cx="294.8" cy="195.3" r="62.4"/>
+	<circle class="st1" cx="118.8" cy="398.7" r="12.8"/>
+	<circle class="st1" cx="144.4" cy="467.2" r="4.3"/>
+	<circle class="st1" cx="165.7" cy="518.9" r="4.3"/>
+	<circle class="st1" cx="406" cy="278.7" r="12.8"/>
+	<circle class="st1" cx="365.8" cy="344.8" r="12.8"/>
+	<circle class="st1" cx="309.1" cy="518.9" r="12.8"/>
+</g>
+</svg>
