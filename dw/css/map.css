@@ -135,6 +135,18 @@ img {
   }
 }
 
+.waves{
+    fill: #5CADD6;
+  animation: move 5s infinite ease-in-out;
+	animation-delay:-3s;
+}
+
+@keyframes move {
+		0% {transform:translateX(0);}
+		50% {transform:translateX(-5px); opacity: .6;}
+		100% {transform:translateX(0);}
+}
+		
 /*  2.3 Large Screens*/
 /*====================  ====================*/
 /*====================  ====================*/
