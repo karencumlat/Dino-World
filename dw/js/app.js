@@ -406,8 +406,7 @@ function ShowInfo() {
   prox.info = pkg.info;
 }
 
-function ChangeScale(el) {
-  buttonId = el.id;
+function ChangeScale() {
   pkg.scale = pkg[dinoName].scale;
   prox.scale = pkg.scale;
 
@@ -419,7 +418,7 @@ function CreateFood(num){
     //this function creates food
     var newFood = document.createElement("img");
     newFood.src = pkg[dinoName].food[num];
-    newFood.id = "food";;
+    newFood.id = "food";
     newFood.style.width = "50px";
     newFood.style.height = "50px";
     newFood.style.position = "absolute";
@@ -427,8 +426,9 @@ function CreateFood(num){
     newFood.style.left = "275px";
     pgmn.appendChild(newFood);
     MoveFood(newFood);
-    foodref = newFood;
+    foodref = newFood.id;
     foodElem = document.querySelector("#food");
+    buttonId = num;
 }
 
 function MoveFood(nf){
@@ -437,15 +437,17 @@ function MoveFood(nf){
   },100);
 }
 
-// pgmn.addEventListener("click", function(){
-//   if(event.target.id == foodElem){
-//       RemoveFood();
-//   }
-// });
+pgmn.addEventListener("click", function(){
+  if(event.target.id == foodref){
+      RemoveFood(buttonId);
+  }
+});
 
-function RemoveFood(){
-  foodref.remove();
+function RemoveFood(el){
+  foodElem.remove();
   CreateSplash();
+  ChangeScale(el)
+
 }
 
 // Splash effect when eating food
@@ -455,13 +457,13 @@ function CreateSplash(){
     var splash = document.createElement("img");
     splash.id = "splash";
 
-    if(pkg[dinoName].food = "herb"){
+    if(pkg[dinoName].food == herb){
       splash.src = "../imgs/dinosaurs/Splashes/splash-01.svg";
-    } else if(pkg[dinoName].food == "carn"){
+    } else if(pkg[dinoName].food == carn){
       splash.src = "../imgs/dinosaurs/Splashes/splash-02.svg";
-    } else if(pkg[dinoName].food == "omni"){
+    } else if(pkg[dinoName].food == omni){
       splash.src = "../imgs/dinosaurs/Splashes/splash-01.svg";
-    } else if(pkg[dinoName].food == "pesc"){
+    } else if(pkg[dinoName].food == pesc){
       splash.src = "../imgs/dinosaurs/Splashes/splash-03.svg"
     }
 
@@ -592,21 +594,21 @@ function ChangeScaleUI(value) {
     ChangeSrc();
   } else if (dinoImg.src.includes("imgs/dinosaurs/egg")){
       alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!");
-    } else if (buttonId == "food1") {
+    } else if (buttonId == "0") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(littleFood)) + ")";
         pkg[dinoName].scale = (parseFloat(value) + parseFloat(littleFood));
         EatFeedback("+1");
         if (dinoImg.style.transform >= "scale(1.6)") {
           dinoImg.style.transform = "scale(1.6)";
         }
-      } else if (buttonId == "food2") {
+      } else if (buttonId == "1") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(bigFood)) + ")";
         pkg[dinoName].scale = (parseFloat(value) + parseFloat(bigFood));
         EatFeedback("+2")
         if (dinoImg.style.transform >= "scale(1.6)") {
           dinoImg.style.transform = "scale(1.6)";
         }
-      } else if (buttonId == "food3") {
+      } else if (buttonId == "3") {
         dinoImg.style.transform = "scale(" + (parseFloat(value) + parseFloat(donut)) + ")";
         if (dinoImg.style.transform >= "scale(1.6)") {
           dinoImg.style.transform = "scale(1.6)";
