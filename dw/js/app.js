@@ -363,11 +363,6 @@ function ExploreButton() {
 }
 
 // map.html page
-function CretaButton() {
-  window.location.href = "./cMap.html";
-}
-
-// cMap.htlm page
 function selectContinent(el) {
   var continent = el.id,
     selCont = "./c" + continent + ".html";
@@ -415,6 +410,7 @@ function ChangeScale() {
 // Drag and drop food
 
 function CreateFood(num){
+    BoopSound();
     //this function creates food
     var newFood = document.createElement("img");
     newFood.src = pkg[dinoName].food[num];
@@ -444,6 +440,7 @@ pgmn.addEventListener("click", function(){
 });
 
 function RemoveFood(el){
+  BigMunchSound();
   foodElem.remove();
   CreateSplash();
   ChangeScale(el)
@@ -453,6 +450,7 @@ function RemoveFood(el){
 // Splash effect when eating food
 
 function CreateSplash(){
+    SplashSound();
     //this function creates food
     var splash = document.createElement("img");
     splash.id = "splash";
@@ -529,6 +527,8 @@ function ChangeSrcUI(value) {
 var eggSpan = document.querySelector("#hatchEgg");
 
 function hatchEgg() {
+  EggCrack();
+  LittleRoar();
   eggSpan.style.display = "none";
   document.querySelector(".menu__dino").style.display = "grid";
 
@@ -576,6 +576,7 @@ function ShowFoodUI(value) {
     document.querySelector("#infoBox").style.display = "none";
     document.querySelector("#food1").src = value[0];
     document.querySelector("#food2").src = value[1];
+    // document.querySelector("#food3").src = value[2];
   } else{
     document.querySelector(".menu__food").style.display = "none";
   }
@@ -592,6 +593,10 @@ function ChangeScaleUI(value) {
   if (pkg[dinoName].scale >= 1.6) {
     pkg[dinoName].scale = 1.6;
     ChangeSrc();
+    SweetVictory();
+    setTimeout(function(){
+      BigRoar();
+    },1000);
   } else if (dinoImg.src.includes("imgs/dinosaurs/egg")){
       alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!");
     } else if (buttonId == "0") {
@@ -630,6 +635,60 @@ function menu() {
   }
 }
 
-function dig() {
-  alert("Digging for Dinosaurs...");
+// ===== AUDIO FUNCTIONS ===== //
+var mnSong = document.querySelector("#theme");
+
+mnSong.volume = 0.7;
+
+function selectionSound(){
+  var ds = document.querySelector("#drumSound");
+
+  if(ds.duration >= "1s"){
+    ds.stop();
+  }
+
+  ds.play();
+}
+
+function EggCrack(){
+  var crack = document.querySelector("#crack");
+  crack.currentTime = 1;
+  crack.play();
+}
+
+function BoopSound(){
+  var boop = document.querySelector("#boop");
+
+  boop.currentTime = 0.2;
+  boop.play();
+}
+
+function SplashSound(){
+  var splashy = document.querySelector("#splashy");
+  splashy.play();
+}
+
+function BigMunchSound(){
+  var bigmunch = document.querySelector("#bigmunch");
+  bigmunch.volume = 0.8;
+  bigmunch.currentTime = 1.2;
+  bigmunch.play();
+}
+
+function SweetVictory(){
+  var vic = document.querySelector("#victory");
+
+  vic.play();
+}
+
+function BigRoar(){
+  var roar = document.querySelector("#bigroar");
+
+  roar.play();
+}
+
+function LittleRoar(){
+  var roar = document.querySelector("#littleroar");
+
+  roar.play();
 }

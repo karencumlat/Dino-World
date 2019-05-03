@@ -133,6 +133,10 @@ img {
     transition: top 2s;
   }
 
+  #food3 {
+    display: none;
+  }
+
   #splash {
     transition: transform 0.2s, opacity 0.3s;
   }
