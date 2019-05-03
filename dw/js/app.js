@@ -636,22 +636,25 @@ function menu() {
 }
 
 // ===== AUDIO FUNCTIONS ===== //
-var mnSong = document.querySelector("#theme");
 
-mnSong.volume = 0.7;
+function ThemeSong(){
+  var mnSong = document.querySelector("#theme");
+
+  mnSong.volume = 0.3;
+  mnSong.play();
+}
+
 
 function selectionSound(){
   var ds = document.querySelector("#drumSound");
-
-  if(ds.duration >= "1s"){
-    ds.stop();
-  }
-
+  ds.currentTime = .3;
+  ds.volume = 1;
   ds.play();
 }
 
 function EggCrack(){
   var crack = document.querySelector("#crack");
+  crack.volume = 0.5;
   crack.currentTime = 1;
   crack.play();
 }
@@ -665,19 +668,20 @@ function BoopSound(){
 
 function SplashSound(){
   var splashy = document.querySelector("#splashy");
+  splashy.volume = 0.6;
   splashy.play();
 }
 
 function BigMunchSound(){
   var bigmunch = document.querySelector("#bigmunch");
-  bigmunch.volume = 0.8;
+  bigmunch.volume = 0.6;
   bigmunch.currentTime = 1.2;
   bigmunch.play();
 }
 
 function SweetVictory(){
   var vic = document.querySelector("#victory");
-
+vic.volume = .5;
   vic.play();
 }
 
@@ -689,6 +693,12 @@ function BigRoar(){
 
 function LittleRoar(){
   var roar = document.querySelector("#littleroar");
-
+  roar.volume = .2;
   roar.play();
 }
+
+// ===== ANIMATIONS ===== //
+
+// function WiggleDino(){
+//   dinoImg.style.top = 10;
+// }

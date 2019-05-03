@@ -119,8 +119,23 @@ img {
   #dinoImage{
     transform: scale(1);
     margin-top: 120px;
-    transition: transform 1s;
+    transition: transform 1s, top 1s;
+    /* position: relative;
+    top: 0; */
+    /* animation-name: dinoMove 3s infinite; */
   }
+
+  /* @keyframes dinoMove {
+    0% {
+      top: 0;
+    }
+    50% {
+      top:20;
+    }
+    100% {
+      top:0;
+    }
+  } */
 
   #feedback {
     font-family: sans-serif;
