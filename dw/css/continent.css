@@ -78,6 +78,18 @@ img {
   text-shadow: 1px 1px black;
 }
 
+#jafrica, #jeuroasia, #jnorthamerica{
+  display: none;
+}
+
+#tnorthamerica, #tsouthamerica, #tafrica{
+  display: none;
+}
+
+#cafrica, #caustralia, #cantarctica, #cnorthamerica, #csouthamerica, #cafrica, #ceuroasia{
+  display: none;
+}
+
 /*  2.2 Small Screens*/
 @media screen and (max-width: 39.9375em) {
   html {

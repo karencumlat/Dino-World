@@ -45,3 +45,46 @@ function changeBtn(e) {
     btnJurassic.className = "btn-rounded btn-link";
   }
 }
+
+var sHead = document.querySelector("#selectHead");
+
+function selectJurassic(e){
+  localStorage.setItem("continent",e.id);
+  window.location.href = "./jurassic.html";
+}
+var con = localStorage.getItem("continent");
+
+var sCon = "j"+con;
+
+function selectCon(){
+  var jConti = document.querySelector("[id=" + sCon + "]");
+  jConti.style.display = "block";
+  sHead.innerText = con;
+}
+
+
+
+function selectTriassic(e){
+  localStorage.setItem("continent",e.id);
+  window.location.href = "./triassic.html";
+}
+var cont = localStorage.getItem("continent");
+var tCon = "t"+cont;
+function selectTCon(){
+  var tConti = document.querySelector("[id=" + tCon + "]");
+  tConti.style.display = "block";
+  sHead.innerText = cont;
+}
+/*
+function selectContinent(e){
+  localStorage.setItem("continent",e.id);
+  window.location.href = "./cretaceous.html";
+}
+
+var conti = localStorage.getItem("continent");
+var cCon = "c"+conti;
+function selectCCon(){
+  var cConti = document.querySelector("[id=" + cCon + "]");
+  cConti.style.display = "block";
+  sHead.innerText = conti;
+}*/
