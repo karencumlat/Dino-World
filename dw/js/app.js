@@ -18,7 +18,8 @@ var dinoImg = document.querySelector("#dinoImage"),
   pgmn = document.querySelector(".page__main"),
   // Reference to grab food icon
   foodref,
-  foodElem;
+  foodElem,
+  bg = document.querySelector(".page");
 
 // var dinosaurs = [tyrannosaurus, mosasaurus, majungasaurus, spinosaurus, ouranosaurus, khaan, isisaurus, oviraptor, ampelosaurus, bactrosaurus, velociraptor, ankylosaurus, pachycephalosaurus, chasmosaurus, bambiraptor, parasaurolophus, triceratops, antarctosaurus, carnotaurus, alvarezsaurus, irritator, stegasaurus, camptosaurus, hesperosaurus, brachiosaurus, pterodactyl, plesiosaurus, chindesaurus, eoraptor, coelophysis, guaibasaurus, coloradisaurus];
 
@@ -39,7 +40,7 @@ var pkg = {
     info: "The mosasaurus was an aquatic dinosaur that is said to be about 50-foot long! Their closest relatives today are snakes and comodo dragons.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/ocean.svg"
   },
 
   majungasaurus: {
@@ -264,7 +265,7 @@ var pkg = {
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/ocean.svg"
   },
 
   chindesaurus: {
@@ -347,6 +348,10 @@ var handler = {
 
     if (props == "scale") {
       ChangeScaleUI(value);
+    }
+
+    if(props == "background"){
+      ChangeBGUI(value);
     }
   }
 }
@@ -514,6 +519,11 @@ function RemoveFeedBack(fdb){
   fdb.remove();
 }
 
+function ChangeBG(){
+  pkg.background = pkg[dinoName].background;
+  prox.background = pkg.background;
+}
+
 // ==== CHANGE UI FUNCTIONS ===== //
 
 function SelectDinoUI() {
@@ -619,6 +629,10 @@ function ChangeScaleUI(value) {
           dinoImg.style.transform = "scale(1.6)";
         }
       }
+}
+
+function ChangeBGUI(value){
+  bg.style.background = value;
 }
 
 // DEFAULT
