@@ -172,7 +172,7 @@ var pkg = {
   triceratops: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/triceratops.svg", "../imgs/dinosaurs/baby/triceratops.svg", "../imgs/dinosaurs/adult/triceratops.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "triceratops means three-horned face in greek!",
     predator: "",
     scale: "1",
     background: ""
@@ -181,7 +181,7 @@ var pkg = {
   antarctosaurus: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/antarctosaurus.svg", "../imgs/dinosaurs/baby/antarctosaurus.svg", "../imgs/dinosaurs/adult/antarctosaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "The antarctosarus weighed as much 80 to 100 tons! And not only that it was over 15feet tall!",
     predator: "",
     scale: "1",
     background: ""
@@ -190,7 +190,7 @@ var pkg = {
   carnotaurus: {
     food: carn,
     src: ["../imgs/dinosaurs/egg/carnotaurus.svg", "../imgs/dinosaurs/baby/carnotaurus.svg", "../imgs/dinosaurs/adult/carnotaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "carnotaurus means 'meat eating bull', not someone you want to mess with!",
     predator: "",
     scale: "1",
     background: ""
@@ -199,7 +199,7 @@ var pkg = {
   alvarezsaurus: {
     food: carn,
     src: ["../imgs/dinosaurs/egg/alvarezsaurus.svg", "../imgs/dinosaurs/baby/alvarezsaurus.svg", "../imgs/dinosaurs/adult/alvarezsaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "alvarezsaurus was known to be a very fast runner!",
     predator: "",
     scale: "1",
     background: ""
@@ -208,7 +208,7 @@ var pkg = {
   irritator: {
     food: pesc,
     src: ["../imgs/dinosaurs/egg/irritator.svg", "../imgs/dinosaurs/baby/irritator.svg", "../imgs/dinosaurs/adult/irritator.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "irritator was as long as two cars put behind each other!",
     predator: "",
     scale: "1",
     background: ""
@@ -217,7 +217,7 @@ var pkg = {
   stegasaurus: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/stegasaurus.svg", "../imgs/dinosaurs/baby/stegasaurus.svg", "../imgs/dinosaurs/adult/stegasaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "stegasaurus's were big dinosaurs, however, their brains were about the same size as a dogs brain!",
     predator: "",
     scale: "1",
     background: ""
@@ -226,7 +226,7 @@ var pkg = {
   camptosaurus: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/camptosaurus.svg", "../imgs/dinosaurs/baby/camptosaurus.svg", "../imgs/dinosaurs/adult/camptosaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "camptosaurus means 'arched dinosaur', it got the name for the arch in its back when it would stand up!",
     predator: "",
     scale: "1",
     background: ""
@@ -235,7 +235,7 @@ var pkg = {
   hesperosaurus: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/hesperosaurus.svg", "../imgs/dinosaurs/baby/hesperosaurus.svg", "../imgs/dinosaurs/adult/hesperosaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "the hesperosaurus had a lot in common with stegasaurus, however, its back plates were more rounded!",
     predator: "",
     scale: "1",
     background: ""
@@ -244,7 +244,7 @@ var pkg = {
   brachiosaurus: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/brachiosaurus.svg", "../imgs/dinosaurs/baby/brachiosaurus.svg", "../imgs/dinosaurs/adult/brachiosaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "brachiosaurus means 'arm lizard' it got that name because it's forelegs are longer than its hindlegs!",
     predator: "",
     scale: "1",
     background: ""
@@ -253,7 +253,7 @@ var pkg = {
   pterodactyl: {
     food: pesc,
     src: ["../imgs/dinosaurs/egg/pterodactyl.svg", "../imgs/dinosaurs/baby/pterodactyl.svg", "../imgs/dinosaurs/adult/pterodactyl.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "Did you know that technicly pterodactyl's arent dinosaurs?! They are actually pterosaurs which is a species of flying lizards!",
     predator: "",
     scale: "1",
     background: ""
@@ -262,7 +262,7 @@ var pkg = {
   plesiosaurus: {
     food: pesc,
     src: ["../imgs/dinosaurs/egg/plesiosaurus.svg", "../imgs/dinosaurs/baby/plesiosaurus.svg", "../imgs/dinosaurs/adult/plesiosaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "The plesiosaurus is the dinosaur that the famous Loch Ness Monster is based on! Maybe dino's are still alive after all?",
     predator: "",
     scale: "1",
     background: "../imgs/theme/ocean.svg"
@@ -271,7 +271,7 @@ var pkg = {
   chindesaurus: {
     food: carn,
     src: ["../imgs/dinosaurs/egg/chindesaurus.svg", "../imgs/dinosaurs/baby/chindesaurus.svg", "../imgs/dinosaurs/adult/chindesaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "The chindesaurus name means 'ghost lizard', and since it was a meat eater it was probably pretty scary!",
     predator: "",
     scale: "1",
     background: ""
@@ -280,7 +280,7 @@ var pkg = {
   eoraptor: {
     food: omni,
     src: ["../imgs/dinosaurs/egg/eoraptor.svg", "../imgs/dinosaurs/baby/eoraptor.svg", "../imgs/dinosaurs/adult/eoraptor.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "the eoraptor was one of the first dinosaurs ever identified! It was a small and speedy omnivore.",
     predator: "",
     scale: "1",
     background: ""
@@ -289,7 +289,7 @@ var pkg = {
   coelophysis: {
     food: carn,
     src: ["../imgs/dinosaurs/egg/coelophysis.svg", "../imgs/dinosaurs/baby/coelophysis.svg", "../imgs/dinosaurs/adult/coelophysis.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "the coelophysis name means 'hollow bone', and it actually had hollow bones! This made it fast and agile to hide from predators.",
     predator: "",
     scale: "1",
     background: ""
@@ -654,7 +654,7 @@ function menu() {
 function ThemeSong(){
   var mnSong = document.querySelector("#theme");
 
-  mnSong.volume = 0.3;
+  mnSong.volume = 1;
   mnSong.play();
 }
 
