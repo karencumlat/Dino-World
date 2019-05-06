@@ -118,3 +118,22 @@ img {
 /*  2.3 Large Screens*/
 /*====================  ====================*/
 /*====================  ====================*/
+@media screen and (min-width: 40em) {
+  .page {
+    min-width: 40em;
+    max-width: 60em;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% auto 50%;
+    grid-template-areas: "hd hd"
+      "mn mn"
+      "ft ft";
+    background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;
+    background-size: cover;
+}
+/*dino world logo*/
+.img__logo {
+  width: 100%;
+  transform: scale(2.5);
+}
+}

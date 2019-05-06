@@ -298,16 +298,31 @@ var pkg = {
   guaibasaurus: {
     food: omni,
     src: ["../imgs/dinosaurs/egg/guaibasaurus.svg", "../imgs/dinosaurs/baby/guaibasaurus.svg", "../imgs/dinosaurs/adult/guaibasaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "Guaibasaurus had three full fingers and two vestigial ones on each hand.",
     predator: "",
     scale: "1",
     background: ""
   },
-
+  wintonotitan: {
+    food: herb,
+    src: ["../imgs/dinosaurs/egg/wintonotitan.svg", "../imgs/dinosaurs/baby/wintonotitan.svg", "../imgs/dinosaurs/adult/wintonotitan.svg"],
+    info: "Wintonotitan was relatively small for a titanosaur, at up to 15 metres in length and around 10 to 15 tonnes in weight.",
+    predator: "",
+    scale: "1",
+    background: ""
+  },
+  trinisaura: {
+    food: herb,
+    src: ["../imgs/dinosaurs/egg/trinisaura.svg", "../imgs/dinosaurs/baby/trinisaura.svg", "../imgs/dinosaurs/adult/trinisaura.svg"],
+    info: "Size is about‭ ‬1.5‭ ‬meters long,‭ ‬but possibly larger when fully grown.",
+    predator: "",
+    scale: "1",
+    background: ""
+  },
   coloradisaurus: {
     food: herb,
     src: ["../imgs/dinosaurs/egg/coloradisaurus.svg", "../imgs/dinosaurs/baby/coloradisaurus.svg", "../imgs/dinosaurs/adult/coloradisaurus.svg"],
-    info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
+    info: "The Coloradisaurus was a large animal, but not as large as other sauropods. It had a characteristic long neck and tail.",
     predator: "",
     scale: "1",
     background: ""
@@ -632,7 +647,7 @@ function ChangeScaleUI(value) {
 }
 
 function ChangeBGUI(value){
-  bg.style.background = value;
+  bg.style.background = "url('"+ value+"')";
 }
 
 // DEFAULT

@@ -108,33 +108,68 @@ img {
     background-size: cover;
   }
 
-  .btn-left{
-    position: fixed;
-    top: 1em;
-    left:1em;
-    transform: scale(.7);
-  }
-  .btn-menu{
-    position: fixed;
-    top: 1em;
-    right:1em;
-    transform: scale(.7);
-  }
-
-  .page__main{
-    grid-row-gap: 2em;
-  }
-
-  .prev__info{
-    background-color: azure;
-  }
-
-  .map{
-    width: 100%;
-    transform: scale(1.5);
-  }
+}
+.btn-left{
+  position: fixed;
+  top: 1em;
+  left:1em;
+  transform: scale(.7);
+}
+.btn-menu{
+  position: fixed;
+  top: 1em;
+  right:1em;
+  transform: scale(.7);
 }
 
+.page__main{
+  grid-row-gap: 2em;
+}
+
+.prev__info{
+  background-color: azure;
+}
+
+.map{
+  width: 100%;
+  transform: scale(1.5);
+}
+
+
+#sea path, .waves{
+    fill: #5CADD6;
+  animation: move 5s infinite ease-in-out;
+	animation-delay:-3s;
+}
+
+@keyframes move {
+		0% {transform:translateX(0);}
+		50% {transform:translateX(-10px); opacity: .5;}
+		100% {transform:translateX(0);}
+}
 /*  2.3 Large Screens*/
 /*====================  ====================*/
 /*====================  ====================*/
+@media screen and (min-width: 40em) {
+  .page {
+    min-width: 40em;
+    max-width: 60em;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% auto 30%;
+    grid-template-areas: "hd hd"
+      "mn mn"
+      "ft ft";
+    background: rgb(51,153,204); /* blue = sea */
+    background-size: cover;
+}
+
+.map {
+  width: 100%;
+  transform: scale(2);
+}
+
+.heading{
+  margin-bottom: 3em;
+}
+}
