@@ -75,6 +75,7 @@ img {
   text-transform: capitalize;
 }
 
+
 /*  2.2 Small Screens*/
 @media screen and (max-width: 39.9375em) {
   html {
@@ -93,100 +94,114 @@ img {
     background-size: cover;
   }
 
-  /*back/left btn*/
-  .btn-left {
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    transform: scale(.7);
-  }
-
-  /*hamburger menu*/
-  .btn-menu {
-    position: fixed;
-    top: 1em;
-    right: 1em;
-    transform: scale(.7);
-  }
-
-  .page__footer {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  /* Dinosaur */
-
-  #dinoImage{
-    transform: scale(1);
-    margin-top: 120px;
-    transition: transform 1s, top 1s;
-    /* position: relative;
-    top: 0; */
-    /* animation-name: dinoMove 3s infinite; */
-  }
-
-  /* @keyframes dinoMove {
-    0% {
-      top: 0;
-    }
-    50% {
-      top:20;
-    }
-    100% {
-      top:0;
-    }
-  } */
-
-  #feedback {
-    font-family: sans-serif;
-    font-size: 36pt;
-    color: peachpuff;
-    transition: left 2s, top 2s, opacity 3s;
-  }
-
-  #food {
-    transition: top 2s;
-  }
-
-  #food3 {
-    display: none;
-  }
-
-  #splash {
-    transition: transform 0.2s, opacity 0.3s;
-  }
-
-  /* food container*/
-  .menu__food {
-    display: none;
-    grid-column-gap: 1em;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  /*food btn*/
-  .btn__footer {
-    width: 100%;
-    height: auto;
-  }
-
-
-  #infoBox {
-    border-radius: 25px;
-    background-color: yellowgreen;
-    display: none;
-    font-size: 11pt;
-    text-align: center;;
-    padding:7px;
-  }
-
-  /*info - food - predator buttons*/
-  .menu__dino {
-    display: none;
-    grid-column-gap: 1em;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 /*  2.3 Large Screens*/
 /*====================  ====================*/
 /*====================  ====================*/
+/*back/left btn*/
+.btn-left {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  transform: scale(.7);
+}
+
+/*hamburger menu*/
+.btn-menu {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  transform: scale(.7);
+}
+
+.page__footer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Dinosaur */
+
+#dinoImage{
+  transform: scale(1);
+  margin-top: 120px;
+  transition: transform 1s, top 1s;
+  /* position: relative;
+  top: 0; */
+  /* animation-name: dinoMove 3s infinite; */
+}
+
+/* @keyframes dinoMove {
+  0% {
+    top: 0;
+  }
+  50% {
+    top:20;
+  }
+  100% {
+    top:0;
+  }
+} */
+
+#feedback {
+  font-family: sans-serif;
+  font-size: 36pt;
+  color: peachpuff;
+  transition: left 2s, top 2s, opacity 3s;
+}
+
+#food {
+  transition: top 2s;
+}
+
+#food3 {
+  display: none;
+}
+
+#splash {
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+/* food container*/
+.menu__food {
+  display: none;
+  grid-column-gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*food btn*/
+.btn__footer {
+  width: 100%;
+  height: auto;
+}
+
+
+#infoBox {
+  border-radius: 25px;
+  background-color: yellowgreen;
+  display: none;
+  font-size: 11pt;
+  text-align: center;;
+  padding:7px;
+}
+
+/*info - food - predator buttons*/
+.menu__dino {
+  display: none;
+  grid-column-gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (min-width: 40em) {
+  .page {
+    min-width: 40em;
+    max-width: 60em;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% auto 35%;
+    grid-template-areas: "hd hd"
+      "mn mn"
+      "ft ft";
+    background: url(../imgs/theme/small-home-bg.svg) no-repeat center center fixed;
+    background-size: cover;
+}
+}
