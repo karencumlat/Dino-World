@@ -31,7 +31,7 @@ var pkg = {
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/forest03.jpg"
+    background: "../imgs/theme/bg/bg04.jpg"
   },
 
   mosasaurus: {
@@ -40,7 +40,7 @@ var pkg = {
     info: "The mosasaurus was an aquatic dinosaur that is said to be about 50-foot long! Their closest relatives today are snakes and comodo dragons.",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/ocean.jpg"
+    background: "../imgs/theme/bg/bg11.jpg"
   },
 
   majungasaurus: {
@@ -49,7 +49,7 @@ var pkg = {
     info: "The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/desert.jpg"
+    background: "../imgs/theme/bg/bg07.jpg"
   },
 
   spinosaurus: {
@@ -58,7 +58,7 @@ var pkg = {
     info: "The spinosaurus is one of the largest meat eating dinosaurs of all time, even bigger than the tyrannosaurus rex! It also has a spine that grew over 5 feet!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/forest02.jpg"
+    background: "../imgs/theme/bg/bg05.jpg"
   },
 
   ouranosaurus: {
@@ -67,7 +67,7 @@ var pkg = {
     info: "The name ouranosaurus means 'brave lizard'. It is believed that the big sail on it's back was used to keep it cool. Though they may have used it to attract a mate too!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/desert.jpg"
+    background: "../imgs/theme/bg/bg06.jpg"
   },
 
   khaan: {
@@ -76,7 +76,7 @@ var pkg = {
     info: "The khaan was a feathered dinosaur with a beak! Dinosaurs closest living relatives today aren't lizards but birds!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/forest.jpg"
+    background: "../imgs/theme/bg/bg03.jpg"
   },
 
   isisaurus: {
@@ -85,7 +85,7 @@ var pkg = {
     info: "The isisaurus inhabited what is today India. They differ from their fellow therapods due to their 'shorter' necks",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/forest02.jpg"
+    background: "../imgs/theme/bg/bg04.jpg"
   },
 
   oviraptor: {
@@ -94,7 +94,7 @@ var pkg = {
     info: "oviraptor means 'egg thief', it was given the name when they discovered its fossil ontop of a nest of eggs. However later they have discovered it was its own eggs, so perhaps not so bad after all!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/forest.jpg"
+    background: "../imgs/theme/bg/bg02.jpg"
   },
 
   ampelosaurus: {
@@ -103,7 +103,7 @@ var pkg = {
     info: "ampelosaurus is said to have been specialized at eating vegetation that was of medium height. It also had spiky bone armor that grew on its back!",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/desert.jpg"
+    background: "../imgs/theme/bg/bg06.jpg"
   },
 
   bactrosaurus: {
@@ -112,7 +112,7 @@ var pkg = {
     info: "The bactrosaurus was a dinosaur who was prone to tumors. It's not known for what reason the poor bactrosaurus suffered from them but paleontologists believe it could be environmental or genetic reasons",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/bg/forest03.jpg"
+    background: "../imgs/theme/bg/bg03.jpg"
   },
 
   velociraptor: {
@@ -121,7 +121,7 @@ var pkg = {
     info: "The name Velociraptor means 'Speedy Thief', and with their 3.5 inch deadly claws on each foot, they aren't dino's you want to mess with!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg08.jpg"
   },
 
   ankylosaurus: {
@@ -130,7 +130,7 @@ var pkg = {
     info: "The ankylosaurus had a massive tail club with which it would defend itself. It's said to be so powerful it could break other dinosaurs bones!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg08.jpg"
   },
 
   pachycephalosaurus: {
@@ -139,7 +139,7 @@ var pkg = {
     info: "The pachycephalosaurus had a reall thick head, in fact its skull roof was up to 10 inches thick!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg02.jpg"
   },
 
   chasmosaurus: {
@@ -148,7 +148,7 @@ var pkg = {
     info: "The chasmosaurus was as heavy as hippo, and could run as fast as a rhino! Luckily it wouldnt run after us since it was a herbivore",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg05.jpg"
   },
 
   bambiraptor: {
@@ -157,7 +157,7 @@ var pkg = {
     info: "bambiraptor was a little bird-like dinosaur which could run as fast as a chicken!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg09.jpg"
   },
 
   parasaurolophus: {
@@ -166,7 +166,7 @@ var pkg = {
     info: "The parasaurolophus was a dinosaur that could walk on both two and four legs! It's head crest is believed to attract mates, but also to increase it's hearing!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg04.jpg"
   },
 
   triceratops: {
@@ -175,7 +175,7 @@ var pkg = {
     info: "triceratops means three-horned face in greek!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg05.jpg"
   },
 
   antarctosaurus: {
@@ -184,7 +184,7 @@ var pkg = {
     info: "The antarctosarus weighed as much 80 to 100 tons! And not only that it was over 15feet tall!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg06.jpg"
   },
 
   carnotaurus: {
@@ -193,7 +193,7 @@ var pkg = {
     info: "carnotaurus means 'meat eating bull', not someone you want to mess with!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg06.jpg"
   },
 
   alvarezsaurus: {
@@ -202,7 +202,7 @@ var pkg = {
     info: "alvarezsaurus was known to be a very fast runner!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg07.jpg"
   },
 
   irritator: {
@@ -211,7 +211,7 @@ var pkg = {
     info: "irritator was as long as two cars put behind each other!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg02.jpg"
   },
 
   stegasaurus: {
@@ -220,7 +220,7 @@ var pkg = {
     info: "stegasaurus's were big dinosaurs, however, their brains were about the same size as a dogs brain!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg04.jpg"
   },
 
   camptosaurus: {
@@ -229,7 +229,7 @@ var pkg = {
     info: "camptosaurus means 'arched dinosaur', it got the name for the arch in its back when it would stand up!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg05.jpg"
   },
 
   hesperosaurus: {
@@ -238,7 +238,7 @@ var pkg = {
     info: "the hesperosaurus had a lot in common with stegasaurus, however, its back plates were more rounded!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg01.jpg"
   },
 
   brachiosaurus: {
@@ -247,7 +247,7 @@ var pkg = {
     info: "brachiosaurus means 'arm lizard' it got that name because it's forelegs are longer than its hindlegs!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg04.jpg"
   },
 
   pterodactyl: {
@@ -256,7 +256,7 @@ var pkg = {
     info: "Did you know that technicly pterodactyl's arent dinosaurs?! They are actually pterosaurs which is a species of flying lizards!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg09.jpg"
   },
 
   plesiosaurus: {
@@ -265,7 +265,7 @@ var pkg = {
     info: "The plesiosaurus is the dinosaur that the famous Loch Ness Monster is based on! Maybe dino's are still alive after all?",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/ocean.svg"
+    background: "../imgs/theme/bg/bg12.jpg"
   },
 
   chindesaurus: {
@@ -274,7 +274,7 @@ var pkg = {
     info: "The chindesaurus name means 'ghost lizard', and since it was a meat eater it was probably pretty scary!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg03.jpg"
   },
 
   eoraptor: {
@@ -283,7 +283,7 @@ var pkg = {
     info: "the eoraptor was one of the first dinosaurs ever identified! It was a small and speedy omnivore.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg01.jpg"
   },
 
   coelophysis: {
@@ -292,7 +292,7 @@ var pkg = {
     info: "the coelophysis name means 'hollow bone', and it actually had hollow bones! This made it fast and agile to hide from predators.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg04.jpg"
   },
 
   guaibasaurus: {
@@ -301,7 +301,7 @@ var pkg = {
     info: "Guaibasaurus had three full fingers and two vestigial ones on each hand.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg06.jpg"
   },
   wintonotitan: {
     food: herb,
@@ -309,7 +309,7 @@ var pkg = {
     info: "Wintonotitan was relatively small for a titanosaur, at up to 15 metres in length and around 10 to 15 tonnes in weight.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg05.jpg"
   },
   trinisaura: {
     food: herb,
@@ -317,7 +317,7 @@ var pkg = {
     info: "Size is about‭ ‬1.5‭ ‬meters long,‭ ‬but possibly larger when fully grown.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg06.jpg"
   },
   coloradisaurus: {
     food: herb,
@@ -325,7 +325,7 @@ var pkg = {
     info: "The Coloradisaurus was a large animal, but not as large as other sauropods. It had a characteristic long neck and tail.",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/bg04.jpg"
   },
   food: "",
   src: "",
@@ -540,10 +540,10 @@ function RemoveFeedBack(fdb){
   fdb.remove();
 }
 
-// function ChangeBG(){
-//   pkg.background = pkg[dinoName].background;
-//   prox.background = pkg.background;
-// }
+function ChangeBG(){
+  pkg.background = pkg[dinoName].background;
+  prox.background = pkg.background;
+}
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
@@ -652,11 +652,11 @@ function ChangeScaleUI(value) {
       }
 }
 
-// function ChangeBGUI(value){
-//   bg.style.background = "url('"+ value+"')";
-//   bg.style.backgroundSize = "cover";
-//   bg.style.backgroundRepeat = "no-repeat";
-// }
+function ChangeBGUI(value){
+  bg.style.background = "url('"+ value+"')";
+  bg.style.backgroundSize = "cover";
+  bg.style.backgroundRepeat = "no-repeat";
+}
 
 // DEFAULT
 if (window.location.href == "dino.html") {
