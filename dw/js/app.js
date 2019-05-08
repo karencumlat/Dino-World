@@ -31,7 +31,7 @@ var pkg = {
     info: "Don't be fooled by his little arms, the Tyrannosaurus Rex could lift up to 439 pounds! No wonder he's the king of the dinosaurs!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/forest03.jpg"
   },
 
   mosasaurus: {
@@ -40,7 +40,7 @@ var pkg = {
     info: "The mosasaurus was an aquatic dinosaur that is said to be about 50-foot long! Their closest relatives today are snakes and comodo dragons.",
     predator: "",
     scale: "1",
-    background: "../imgs/theme/ocean.svg"
+    background: "../imgs/theme/bg/ocean.jpg"
   },
 
   majungasaurus: {
@@ -49,7 +49,7 @@ var pkg = {
     info: "The majungasaurus was one of the top predators of its time. It's even believed that majungasaurus would not only hunt other dino's but also each other!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/desert.jpg"
   },
 
   spinosaurus: {
@@ -58,7 +58,7 @@ var pkg = {
     info: "The spinosaurus is one of the largest meat eating dinosaurs of all time, even bigger than the tyrannosaurus rex! It also has a spine that grew over 5 feet!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/forest02.jpg"
   },
 
   ouranosaurus: {
@@ -67,7 +67,7 @@ var pkg = {
     info: "The name ouranosaurus means 'brave lizard'. It is believed that the big sail on it's back was used to keep it cool. Though they may have used it to attract a mate too!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/desert.jpg"
   },
 
   khaan: {
@@ -76,7 +76,7 @@ var pkg = {
     info: "The khaan was a feathered dinosaur with a beak! Dinosaurs closest living relatives today aren't lizards but birds!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/forest.jpg"
   },
 
   isisaurus: {
@@ -85,7 +85,7 @@ var pkg = {
     info: "The isisaurus inhabited what is today India. They differ from their fellow therapods due to their 'shorter' necks",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/forest02.jpg"
   },
 
   oviraptor: {
@@ -94,7 +94,7 @@ var pkg = {
     info: "oviraptor means 'egg thief', it was given the name when they discovered its fossil ontop of a nest of eggs. However later they have discovered it was its own eggs, so perhaps not so bad after all!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/forest.jpg"
   },
 
   ampelosaurus: {
@@ -103,7 +103,7 @@ var pkg = {
     info: "ampelosaurus is said to have been specialized at eating vegetation that was of medium height. It also had spiky bone armor that grew on its back!",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/desert.jpg"
   },
 
   bactrosaurus: {
@@ -112,7 +112,7 @@ var pkg = {
     info: "The bactrosaurus was a dinosaur who was prone to tumors. It's not known for what reason the poor bactrosaurus suffered from them but paleontologists believe it could be environmental or genetic reasons",
     predator: "",
     scale: "1",
-    background: ""
+    background: "../imgs/theme/bg/forest03.jpg"
   },
 
   velociraptor: {
@@ -433,6 +433,9 @@ function CreateFood(num){
     BoopSound();
     //this function creates food
     var newFood = document.createElement("img");
+    newFood.addEventListener("click", function(){
+      RemoveFood(this);
+    })
     newFood.src = pkg[dinoName].food[num];
     newFood.id = "food";
     newFood.style.width = "50px";
@@ -453,11 +456,11 @@ function MoveFood(nf){
   },100);
 }
 
-pgmn.addEventListener("click", function(){
-  if(event.target.id == foodref){
-      RemoveFood(buttonId);
-  }
-});
+// pgmn.addEventListener("click", function(){
+//   if(event.target.id == foodref){
+//       RemoveFood(buttonId);
+//   }
+// });
 
 function RemoveFood(el){
   BigMunchSound();
@@ -501,6 +504,9 @@ function ScaleSplash(splash){
   splash.style.transform = "scale(3)";
   setTimeout(function(){
     splash.style.opacity = 0;
+    setTimeout(function(){
+      splash.remove();
+    },100);
   }, 300);
 }
 
@@ -534,10 +540,10 @@ function RemoveFeedBack(fdb){
   fdb.remove();
 }
 
-function ChangeBG(){
-  pkg.background = pkg[dinoName].background;
-  prox.background = pkg.background;
-}
+// function ChangeBG(){
+//   pkg.background = pkg[dinoName].background;
+//   prox.background = pkg.background;
+// }
 
 // ==== CHANGE UI FUNCTIONS ===== //
 
@@ -646,9 +652,11 @@ function ChangeScaleUI(value) {
       }
 }
 
-function ChangeBGUI(value){
-  bg.style.background = "url('"+ value+"')";
-}
+// function ChangeBGUI(value){
+//   bg.style.background = "url('"+ value+"')";
+//   bg.style.backgroundSize = "cover";
+//   bg.style.backgroundRepeat = "no-repeat";
+// }
 
 // DEFAULT
 if (window.location.href == "dino.html") {
