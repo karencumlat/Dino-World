@@ -624,11 +624,16 @@ function ChangeScaleUI(value) {
   if (pkg[dinoName].scale >= 1.6) {
     pkg[dinoName].scale = 1.6;
     ChangeSrc();
-    SweetVictory();
-    addDinoList()
-    setTimeout(function(){
-      BigRoar();
-    },1000);
+    if(dl.innerHTML.includes(dinoName)){
+      DinoAlert();
+    } else {
+      addDinoList();
+      SweetVictory();
+      setTimeout(function(){
+        BigRoar();
+      },1000);
+    }
+
   } else if (dinoImg.src.includes("imgs/dinosaurs/egg")){
       alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!");
     } else if (buttonId == "0") {
@@ -728,6 +733,10 @@ function LittleRoar(){
 var vm = document.querySelector("#dinoMenu");
 var dl = document.querySelector("#dinoList");
 var dd = document.querySelector("#dinoDex");
+// var counter = ["0"];
+
+  // localStorage.setItem("counter", counter);
+
 // var dinosaurList = [];
 
 function menu(){
@@ -742,7 +751,6 @@ function menu(){
 }
 
 function SeeDinoList(){
-
   if(dl.style.left == "-100vw"){
     dl.style.left = "0";
   } else if(dl.style.left == "0px"){
@@ -765,11 +773,14 @@ function addDinoList(){
   newHeader.className = "listDinoName";
   dd.appendChild(newHeader);
   localStorage.setItem("DinoList", dd.innerHTML);
+  // counter.push("numba");
+    // TotalDino();
 }
 
 function GetDinoList(){
   dd.innerHTML = localStorage.getItem("DinoList");
 }
+
 
 function goHome() {
   window.location.href = "./index.html";
@@ -782,6 +793,22 @@ function goAbout() {
 function goTutor() {
   window.location.href = "./tutorial.html";
 }
+
+// function TotalDino(){
+//   var countText = document.querySelector("#dinoCount");
+//
+//   countText.innerHTML = localStorage.getItem("counter").length + "/34";
+//
+// }
+
+function DinoAlert(){
+  document.querySelector("#DinoAlert").style.transform = "scale(1)";
+}
+
+document.querySelector("#DinoAlert").addEventListener("click", function(){
+  document.querySelector("#DinoAlert").style.transform = "scale(0)";
+});
+
 // ===== ANIMATIONS ===== //
 
 // function WiggleDino(){
