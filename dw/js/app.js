@@ -625,7 +625,7 @@ function ChangeScaleUI(value) {
     pkg[dinoName].scale = 1.6;
     ChangeSrc();
     if(dl.innerHTML.includes(dinoName)){
-      alert("you already trained that dino!");
+      DinoAlert();
     } else {
       addDinoList();
       SweetVictory();
@@ -744,12 +744,15 @@ function LittleRoar(){
 
 var dl = document.querySelector("#dinoList");
 var dd = document.querySelector("#dinoDex");
+// var counter = ["0"];
+
+  // localStorage.setItem("counter", counter);
+
 // var dinosaurList = [];
 
 
 
 function SeeDinoList(){
-
   if(dl.style.left == "-100vw"){
     dl.style.left = "0";
   } else if(dl.style.left == "0px"){
@@ -772,11 +775,28 @@ function addDinoList(){
   newHeader.className = "listDinoName";
   dd.appendChild(newHeader);
   localStorage.setItem("DinoList", dd.innerHTML);
+  // counter.push("numba");
+    // TotalDino();
 }
 
 function GetDinoList(){
   dd.innerHTML = localStorage.getItem("DinoList");
 }
+
+// function TotalDino(){
+//   var countText = document.querySelector("#dinoCount");
+//
+//   countText.innerHTML = localStorage.getItem("counter").length + "/34";
+//
+// }
+
+function DinoAlert(){
+  document.querySelector("#DinoAlert").style.transform = "scale(1)";
+}
+
+document.querySelector("#DinoAlert").addEventListener("click", function(){
+  document.querySelector("#DinoAlert").style.transform = "scale(0)";
+});
 // ===== ANIMATIONS ===== //
 
 // function WiggleDino(){
