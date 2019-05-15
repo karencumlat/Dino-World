@@ -47,7 +47,16 @@
 
 </head>
 
-<body class="page" onload="ThemeSong()">
+<body class="page" onload="ThemeSong();GetDinoList()">
+
+  <!-- Dino List -->
+  <div id="dinoList">
+    <h1>Dinosaurs List</h1>
+    <p>
+      Here are all the Dinosaurs you've raised!
+    </p>
+  </div>
+
   <!-- ===== AUDIO ===== -->
   <audio id="theme">
     <source src="audio/music/ThemeSong.mp3" type="audio/mp3" />

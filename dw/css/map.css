@@ -75,6 +75,24 @@ img {
   text-shadow: 1px 1px black;
 }
 
+/* Dino list */
+
+#dinoList {
+  width: 100vw;
+  height: 100vh;
+  background-color:#B2DE30;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  z-index: 1;
+  overflow: scroll;
+  transition: left 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /*  2.2 Small Screens*/
 @media screen and (max-width: 39.9375em) {
   html {

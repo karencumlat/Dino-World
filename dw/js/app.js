@@ -625,6 +625,7 @@ function ChangeScaleUI(value) {
     pkg[dinoName].scale = 1.6;
     ChangeSrc();
     SweetVictory();
+    addDinoList()
     setTimeout(function(){
       BigRoar();
     },1000);
@@ -734,6 +735,43 @@ function LittleRoar(){
   roar.play();
 }
 
+// ===== DINOSAUR LIST FUNCTION ===== //
+
+var dl = document.querySelector("#dinoList");
+var dd = document.querySelector("#dinoDex");
+// var dinosaurList = [];
+
+
+
+function SeeDinoList(){
+
+  if(dl.style.left == "-100vw"){
+    dl.style.left = "0";
+  } else if(dl.style.left == "0px"){
+    dl.style.left = "-100vw";
+  } else if(dl.style.left == ""){
+    dl.style.left = "0";
+  }
+}
+
+function addDinoList(){
+  var newDino = document.createElement("img");
+  newDino.src = pkg[dinoName].src[2];
+  newDino.className = "listDino";
+  newDino.style.width = "100px";
+  newDino.style.height = "100px";
+  dd.appendChild(newDino);
+
+  var newHeader = document.createElement("h3");
+  newHeader.innerHTML = dinoName;
+  newHeader.className = "listDinoName";
+  dd.appendChild(newHeader);
+  localStorage.setItem("DinoList", dd.innerHTML);
+}
+
+function GetDinoList(){
+  dd.innerHTML = localStorage.getItem("DinoList");
+}
 // ===== ANIMATIONS ===== //
 
 // function WiggleDino(){
