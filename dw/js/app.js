@@ -624,11 +624,16 @@ function ChangeScaleUI(value) {
   if (pkg[dinoName].scale >= 1.6) {
     pkg[dinoName].scale = 1.6;
     ChangeSrc();
-    SweetVictory();
-    addDinoList()
-    setTimeout(function(){
-      BigRoar();
-    },1000);
+    if(dl.innerHTML.includes(dinoName)){
+      alert("you already trained that dino!");
+    } else {
+      addDinoList();
+      SweetVictory();
+      setTimeout(function(){
+        BigRoar();
+      },1000);
+    }
+
   } else if (dinoImg.src.includes("imgs/dinosaurs/egg")){
       alert("You can't feed an egg silly! Try clicking on the egg to hatch it first!");
     } else if (buttonId == "0") {
