@@ -123,18 +123,6 @@ img {
   }
 
 }
-.btn-left{
-  position: fixed;
-  top: 1em;
-  left:1em;
-  transform: scale(.7);
-}
-.btn-menu{
-  position: fixed;
-  top: 1em;
-  right:1em;
-  transform: scale(.7);
-}
 
 .page__main{
   grid-row-gap: 2em;
@@ -157,9 +145,9 @@ img {
 }
 
 @keyframes move {
-		0% {transform:translateX(0);}
-		50% {transform:translateX(-10px); opacity: .5;}
-		100% {transform:translateX(0);}
+  0% {transform:translateX(0);}
+  50% {transform:translateX(-10px); opacity: .4;}
+  100% {transform:translateX(0);}
 }
 /*  2.3 Large Screens*/
 /*====================  ====================*/

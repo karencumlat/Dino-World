@@ -48,14 +48,26 @@
 </head>
 
 <body class="page" onload="ThemeSong();GetDinoList()">
-
+  <!--hamburger menu-->
+  <div id="dinoMenu">
+    <button type="button" class="btn-close"><i class="fas fa-times" onclick="menu()"></i></button>
+    <div id="viewMenu">
+      <button type="button" class="btn-rounded btn-link" onclick="goHome()">Home</button>
+      <button type="button" class="btn-rounded btn-link" onclick="goAbout()">About</button>
+      <button type="button" class="btn-rounded btn-link" onclick="goTutor()">Tutorial</button>
+    </div>
+  </div>   <!--end hamburger menu-->
   <!-- Dino List -->
   <div id="dinoList">
+    <button type="button" class="btn-close"><i class="fas fa-times" onclick="SeeDinoList()"></i></button>
     <h1>Dinosaurs List</h1>
     <p>
       Here are all the Dinosaurs you've raised!
     </p>
-  </div>
+    <div id="dinoDex">
+
+    </div>
+  </div>  <!-- end Dino List -->
 
   <!-- ===== AUDIO ===== -->
   <audio id="theme">
@@ -66,7 +78,10 @@
   </audio>
   <header class="page__header">
     <button type="button" class="btn-round btn-left" onClick="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i></button>
-    <button type="button" class="btn-round btn-menu"><i class="fas fa-bars" id="ham-menu" onclick="menu()"></i></button>
+    <div class="btn-menu">
+      <button type="button" class="btn-round" onclick="SeeDinoList()"><img src="imgs/theme/sd-btn.svg" /></button>
+      <button type="button" class="btn-round" onclick="menu()"><i class="fas fa-bars" id="ham-menu"></i></button>
+    </div>
   </header>
   <main class="page__main">
     <h2 class="heading">Select a Period</h2>
@@ -2336,7 +2351,7 @@
     <div class="menu__periods">
       <button type="button" class="btn-rounded btn-link" id="btn-triassic" onclick="clickTriassic(this);selectionSound()">Triassic</button>
       <button type="button" class="btn-rounded btn-link" id="btn-jurassic" onclick="clickJurassic(this);selectionSound()">Jurassic</button>
-      <button type="button" class="btn-rounded btn-link" id="btn-cretaceous" onclick="clickCretaceous(this);selectionSound()">Cretaceous</button>
+      <button type="button" class="btn-rounded btn-rounded-click" id="btn-cretaceous" onclick="clickCretaceous(this);selectionSound()">Cretaceous</button>
     </div>
   </footer>
   <script src="js/app.js"></script>

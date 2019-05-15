@@ -438,11 +438,11 @@ function CreateFood(num){
     })
     newFood.src = pkg[dinoName].food[num];
     newFood.id = "food";
-    newFood.style.width = "50px";
+    /*newFood.style.width = "50px";
     newFood.style.height = "50px";
     newFood.style.position = "absolute";
     newFood.style.top = "200px";
-    newFood.style.left = "275px";
+    newFood.style.left = "275px";*/
     pgmn.appendChild(newFood);
     MoveFood(newFood);
     foodref = newFood.id;
@@ -488,12 +488,12 @@ function CreateSplash(){
       splash.src = "../imgs/dinosaurs/Splashes/splash-03.svg"
     }
 
-    splash.style.width = "50px";
+    /*splash.style.width = "50px";
     splash.style.height = "50px";
     splash.style.position = "absolute";
     splash.style.top = "450px";
     splash.style.transform = "scale(.5)";
-    splash.style.left = "275px";
+    splash.style.left = "275px";*/
     pgmn.appendChild(splash);
     setTimeout(function(){
         ScaleSplash(splash);
@@ -654,23 +654,12 @@ function ChangeScaleUI(value) {
 }
 
 function ChangeBGUI(value){
-  bg.style.background = "url('"+ value+"')";
-  bg.style.backgroundSize = "cover";
-  bg.style.backgroundRepeat = "no-repeat";
+  bg.style.background = "url('"+ value+"') no-repeat center center fixed";
 }
 
 // DEFAULT
 if (window.location.href == "dino.html") {
   dinoImg.style.transform = "scale(" + 1 + ")";
-}
-
-function menu() {
-  var menu = document.querySelector("#ham-menu");
-  if (menu.className == "fas fa-bars") {
-    menu.className = "fas fa-times";
-  } else {
-    menu.className = "fas fa-bars";
-  }
 }
 
 // ===== AUDIO FUNCTIONS ===== //
@@ -736,12 +725,21 @@ function LittleRoar(){
 }
 
 // ===== DINOSAUR LIST FUNCTION ===== //
-
+var vm = document.querySelector("#dinoMenu");
 var dl = document.querySelector("#dinoList");
 var dd = document.querySelector("#dinoDex");
 // var dinosaurList = [];
 
+function menu(){
 
+  if(vm.style.left == "-100vw"){
+    vm.style.left = "0";
+  } else if(vm.style.left == "0px"){
+    vm.style.left = "-100vw";
+  } else if(vm.style.left == ""){
+    vm.style.left = "0";
+  }
+}
 
 function SeeDinoList(){
 
@@ -771,6 +769,18 @@ function addDinoList(){
 
 function GetDinoList(){
   dd.innerHTML = localStorage.getItem("DinoList");
+}
+
+function goHome() {
+  window.location.href = "./index.html";
+}
+
+function goAbout() {
+  window.location.href = "./about.html";
+}
+
+function goTutor() {
+  window.location.href = "./tutorial.html";
 }
 // ===== ANIMATIONS ===== //
 

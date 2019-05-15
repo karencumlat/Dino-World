@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="css/button.css" rel="stylesheet" type="text/css">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
   <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -17,14 +17,24 @@
   <audio loop id="theme">
     <source src="audio/music/ThemeSong.mp3" type="audio/mp3" />
   </audio>
+  <!--hamburger menu-->
+  <div id="dinoMenu">
+    <button type="button" class="btn-close"><i class="fas fa-times" onclick="menu()"></i></button>
+    <div id="viewMenu">
+      <button type="button" class="btn-rounded btn-link" onclick="goHome()">Home</button>
+      <button type="button" class="btn-rounded btn-link" onclick="goAbout()">About</button>
+      <button type="button" class="btn-rounded btn-link" onclick="goTutor()">Tutorial</button>
+    </div>
+  </div>   <!--end hamburger menu-->
+
   <header class="page__header">
-      <button type="button" class="btn-round header__menu"><i class="fas fa-bars" id="ham-menu" onclick="menu()"></i></button>
+    <button type="button" class="btn-round header__menu"><i class="fas fa-bars" id="ham-menu" onclick="menu()"></i></button>
   </header>
   <main class="page__main">
-      <img class="img__logo" src="imgs/theme/logo.svg" alt="Dino World Logo" />
+    <img class="img__logo" src="imgs/theme/logo.svg" alt="Dino World Logo" />
   </main>
   <footer class="page__footer">
-<button type="button" class="btn-explore scaling" id="explore" onclick="ExploreButton()">Explore</button>
+    <button type="button" class="btn-explore scaling" id="explore" onclick="ExploreButton()">Explore</button>
   </footer>
   <script src="js/app.js"></script>
 </body>

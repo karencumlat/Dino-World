@@ -167,6 +167,11 @@ img {
 }
 
 #food {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: -50px;
+  left: 60%;
   transition: top 2s;
 }
 
@@ -175,6 +180,12 @@ img {
 }
 
 #splash {
+  width: 3.5em;
+  height: 3.5em;
+  position: absolute;
+  top: 450px;
+  left: 60%;
+  transform: scale(.5);
   transition: transform 0.2s, opacity 0.3s;
 }
 
