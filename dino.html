@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>App | Dino World</title>
+  <link href="css/dino.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body class="page" onload="ChangeHeader();ChangeSrc();ThemeSong();ChangeBG();GetDinoList()">
+  <!--hamburger menu-->
+  <div id="dinoMenu">
+    <button type="button" class="btn-close"><i class="fas fa-times" onclick="menu()"></i></button>
+    <div id="viewMenu">
+      <button type="button" class="btn-rounded btn-link" onclick="goHome()">Home</button>
+      <button type="button" class="btn-rounded btn-link" onclick="goAbout()">About</button>
+      <button type="button" class="btn-rounded btn-link" onclick="goTutor()">Tutorial</button>
+    </div>
+  </div>   <!--end hamburger menu-->
+  <!-- Dino List -->
+  <div id="dinoList">
+    <button type="button" class="btn-close"><i class="fas fa-times" onclick="SeeDinoList()"></i></button>
+    <h1>Dinosaurs List</h1>
+    <h3 id="dinoCount"></h3>
+    <p>
+      Here are all the Dinosaurs you've raised!
+    </p>
+    <div id="dinoDex">
+
+    </div>
+  </div>
+  <div id="DinoAlert">
+    <h2>Oh ooh..</h2>
+    <h4>You already raised that dinosaur! Try exploring other places so you can collect all 34 dinosaurs and become the<br/> <span>Dino-King!</span></h4>
+  </div>
+  <!-- ===== AUDIO ===== -->
+  <audio loop id="theme">
+    <source src="audio/music/ThemeSong.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="crack">
+    <source src="audio/effects/EggCrack.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="boop">
+    <source src="audio/effects/Boop.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="splashy">
+    <source src="audio/effects/Splash.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="bigmunch">
+    <source src="audio/effects/BigMunch.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="victory">
+    <source src="audio/effects/Victory.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="bigroar">
+    <source src="audio/dinoSounds/BigCarn.mp3" type="audio/mp3" />
+  </audio>
+  <audio id="littleroar">
+    <source src="audio/dinoSounds/SmallCarn.mp3" type="audio/mp3" />
+  </audio>
+
+  <header class="page__header">
+    <button type="button" class="btn-round btn-left" onClick="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i></button>
+    <div class="btn-menu">
+      <button type="button" class="btn-round" onclick="SeeDinoList()"><img src="imgs/theme/sd-btn.svg" /></button>
+      <button type="button" class="btn-round" onclick="menu()"><i class="fas fa-bars" id="ham-menu"></i></button>
+    </div>
+  </header>
+  <main class="page__main">
+    <h2 id="dinoName" class="heading">Tyrannosaurus</h2>
+    <div class="map">
+      <img id="dinoImage" class="logo__img" src="" alt="" onclick="hatchEgg()"/>
+    </div>
+  </main>
+  <footer class="page__footer">
+    <button type="button" class="btn-explore scaling" id="hatchEgg" disabled>Click Egg</button>
+    <div class="menu__food food">
+      <input type="image" src="" id="food1" class="btn__footer" alt="" onclick="CreateFood(0)">
+      <input type="image" src="" id="food2" class="btn__footer " alt="" onclick="CreateFood(1)">
+      <input type="image" src="" id="food3" class="btn__footer" alt="" onclick="CreateFood(3)">
+    </div>
+    <div class="menu__info info" id="infoBox">
+    </div>
+    <div class="menu__dino">
+      <button type="button" class="btn-round" onclick="ShowInfo()"><i class="fas fa-info"></i></button>
+      <button type="button" class="btn-round" onclick="ShowFood()"><i class="fas fa-utensils"></i></button>
+      <button type="button" class="btn-round" onclick="resetDino()"><i class="fas fa-reply"></i></button>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
